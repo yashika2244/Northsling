@@ -14,20 +14,28 @@ export default function Hero2() {
       {/* Dark Overlay with Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-0"></div>
 
-      {/* Optional: Subtle floating particles */}
-      <div className="absolute inset-0 z-1">
-        {/* You can add stars or floating orbs here if needed */}
-      </div>
-
       {/* Content */}
-      <div className="relative z-10 px-6 max-w-4xl flex flex-col items-center justify-start space-y-6 pt-16 md:pt-0">
+      <div 
+        className="
+          relative z-10 px-6 max-w-4xl flex flex-col items-center 
+          justify-start pt-20 space-y-6   /* Mobile: top aligned with padding */
+          md:justify-center md:pt-0       /* Desktop: center aligned */
+        "
+      >
         <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
           Innovating the <span className="text-cyan-400">Future</span>
         </h1>
 
         <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
-          We craft modern solutions with cutting-edge technology to drive innovation, 
-          deliver measurable impact, and help your business thrive in the digital era.
+          We craft modern solutions with cutting-edge technology to drive 
+          innovation, deliver measurable impact, and help your business 
+          thrive in the digital era.
+        </p>
+
+        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
+          From AI-powered platforms to intelligent automation and data-driven 
+          strategies, our mission is to simplify complexity and unlock new 
+          opportunities. 
         </p>
 
         <div className="mt-8 flex flex-row justify-center gap-5">
