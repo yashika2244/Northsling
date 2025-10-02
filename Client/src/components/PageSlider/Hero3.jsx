@@ -2,7 +2,7 @@ import React from "react";
 
 const NUM_BUBBLES = 40;
 
-export default function Hero3() {
+export default function Hero3({ currentPage, setCurrentPage }) {
   const bubbles = Array.from({ length: NUM_BUBBLES }).map(() => {
     const top = Math.random() * 100;
     const left = Math.random() * 100;
@@ -36,33 +36,47 @@ export default function Hero3() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-start space-y-6">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
-          Seamless Digital Experiences
-        </h1>
+     <div className="relative z-10 max-w-4xl  md:pt-20  mx-auto flex flex-col items-center justify-center h-full space-y-6">
+  <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
+    Seamless Digital Experiences
+  </h1>
 
-        <p className="text-white/70 md:text-lg text-base leading-relaxed max-w-3xl">
-          Welcome to our digital world! We craft seamless experiences that elevate brands, enhance user engagement, 
-          and deliver measurable results. Our team focuses on intuitive designs, scalable solutions, and innovative ideas.
-        </p>
+  <p className="text-white/70 md:text-lg text-base leading-relaxed max-w-3xl">
+    Welcome to our digital world! We craft seamless experiences that elevate brands, enhance user engagement, 
+    and deliver measurable results. Our team focuses on intuitive designs, scalable solutions, and innovative ideas.
+  </p>
 
-        <div className="flex flex-wrap justify-center gap-4 mt-6">
-          <a
-            href="/cases"
-            className="px-6 py-3 rounded-md bg-cyan-600 text-white font-semibold shadow-lg 
-                       hover:bg-cyan-500 hover:scale-105 transition transform duration-300"
-          >
-            View Case Studies
-          </a>
-          <a
-            href="/contact"
-            className="px-6 py-3 rounded-md border-2 border-white text-white font-semibold 
-                       hover:bg-white hover:text-cyan-600 hover:scale-105 transition transform duration-300"
-          >
-            Get in Touch
-          </a>
-        </div>
-      </div>
+  <div className="flex flex-wrap justify-center gap-4 mt-6">
+    <a
+      href="/cases"
+      className="px-6 py-3 rounded-md bg-cyan-600 text-white font-semibold shadow-lg 
+                 hover:bg-cyan-500 hover:scale-105 transition transform duration-300"
+    >
+      View Case Studies
+    </a>
+    <a
+      href="/contact"
+      className="px-6 py-3 rounded-md border-2 border-white text-white font-semibold 
+                 hover:bg-white hover:text-cyan-600 hover:scale-105 transition transform duration-300"
+    >
+      Get in Touch
+    </a>
+  </div>
+
+  {/* Mobile Dots */}
+  <div className="flex justify-center gap-3 mt-auto mb-6 w-full">
+    {[0,1,2,3].map((i) => (
+      <button
+        key={i}
+        onClick={() => setCurrentPage(i)}
+        className={`w-3 h-3 rounded-full transition-all duration-300 ${
+          i === currentPage ? "bg-white scale-125 shadow-md" : "bg-gray-400 hover:bg-white/70"
+        }`}
+      ></button>
+    ))}
+  </div>
+</div>
+
 
       {/* Bubble Animation Keyframes */}
       <style>

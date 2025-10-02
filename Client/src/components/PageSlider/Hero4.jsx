@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Hero4() {
+export default function Hero4({ currentPage, setCurrentPage }) {
   return (
     <section
       className="relative flex flex-col items-center h-screen text-center overflow-hidden bg-cover bg-center"
@@ -13,8 +13,7 @@ export default function Hero4() {
       <div
         className="
           relative z-10 px-6 max-w-4xl flex flex-col items-center space-y-6
-          justify-start pt-24    /* Mobile: top aligned with padding */
-          md:justify-center md:pt-0 /* Desktop: center aligned */
+          pt-20 md:pt-0 md:h-full md:justify-center
         "
       >
         <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -45,6 +44,18 @@ export default function Hero4() {
           </a>
         </div>
       </div>
+       {/* Mobile Dots */}
+        <div className="flex justify-center gap-3 mt-auto mb-6 w-full">
+          {[0,1,2,3].map((i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentPage(i)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                i === currentPage ? "bg-white scale-125 shadow-md" : "bg-gray-400 hover:bg-white/70"
+              }`}
+            ></button>
+          ))}
+          </div>
     </section>
   );
 }

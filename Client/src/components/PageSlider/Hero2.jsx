@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Hero2() {
+export default function Hero2({ currentPage, setCurrentPage }) {
   return (
     <section 
-      className="relative flex flex-col md:flex-col items-center justify-start md:justify-center h-screen text-center overflow-hidden"
+      className="relative flex flex-col md:pt-20 md:flex-col items-center justify-start md:justify-center h-screen text-center overflow-hidden"
       style={{
         backgroundImage: `url('/bg-image1.jpg')`,
         backgroundSize: 'cover',
@@ -55,6 +55,17 @@ export default function Hero2() {
           </a>
         </div>
       </div>
+      {/* Dots */}
+<div className="flex justify-center gap-3 mt-auto mb-6 z-10 relative">
+  {[0,1,2,3].map((i) => (
+    <button key={i}
+            onClick={() => setCurrentPage(i)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              i===currentPage ? "bg-white scale-125 shadow-md" : "bg-gray-400 hover:bg-white/70"
+            }`}
+    ></button>
+  ))}
+</div>
     </section>
   );
 }
