@@ -3,7 +3,7 @@ import React from "react";
 export default function Hero2() {
   return (
     <section 
-      className="relative flex items-center justify-center h-screen text-center overflow-hidden"
+      className="relative flex items-start md:items-center justify-center h-screen text-center overflow-hidden"
       style={{
         backgroundImage: `url('/bg-image1.jpg')`,
         backgroundSize: 'cover',
@@ -11,10 +11,10 @@ export default function Hero2() {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Optional subtle overlay for better text readability */}
-      <div className="absolute inset-0 z-0"></div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/40 z-0"></div>
 
-      <div className="relative z-10 px-6">
+      <div className="relative z-10 px-6 mt-16 md:mt-0">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-2xl leading-tight">
           Innovating the Future
         </h1>

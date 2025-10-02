@@ -3,13 +3,13 @@ import React from "react";
 export default function Hero4() {
   return (
     <section
-      className="relative flex items-center justify-center h-screen text-center bg-cover bg-center"
+      className="relative flex items-start md:items-center justify-start md:justify-center h-screen text-center bg-cover bg-center"
       style={{ backgroundImage: "url('/bg-img2.jpg')" }} 
     >
       {/* Neon Glow Overlay */}
       <div className="absolute inset-0 "></div>
 
-    <div className="relative z-10 px-6">
+    <div className="relative z-10 px-6 mt-16 md:mt-0">
   <h1 className="text-4xl md:text-6xl font-extrabold text-cyan-400 drop-shadow-[0_0_15px_#00ffff]">
     Join the Revolution
   </h1>

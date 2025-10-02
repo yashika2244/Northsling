@@ -38,31 +38,34 @@ export default function PageSlider() {
   const PrevComponent = prevPage !== null ? pages[prevPage] : null;
 
   return (
-<div className="relative w-full h-screen overflow-hidden">
-
+    <div className="relative w-full h-screen overflow-hidden">
       {/* Previous Slide */}
- {PrevComponent && (
-    <div
-      key={`prev-${prevPage}`}
-      className="absolute top-0 left-0 w-full h-full"
-      style={{
-        animation: `slideOut-${direction === 1 ? "left" : "right"} 1s forwards`,
-      }}
-    >
-      <PrevComponent />
-    </div>
-  )}
+      {PrevComponent && (
+        <div
+          key={`prev-${prevPage}`}
+          className="absolute top-0 left-0 w-full h-full"
+          style={{
+            animation: `slideOut-${
+              direction === 1 ? "left" : "right"
+            } 1s forwards`,
+          }}
+        >
+          <PrevComponent />
+        </div>
+      )}
 
-  {/* Current Slide */}
-  <div
-    key={`current-${currentPage}`}
-    className="absolute top-0 left-0 w-full h-full"
-    style={{
-      animation: `slideIn-${direction === 1 ? "right" : "left"} 1s forwards`,
-    }}
-  >
-    <CurrentComponent />
-  </div>
+      {/* Current Slide */}
+      <div
+        key={`current-${currentPage}`}
+        className="absolute top-0 left-0 w-full h-full"
+        style={{
+          animation: `slideIn-${
+            direction === 1 ? "right" : "left"
+          } 1s forwards`,
+        }}
+      >
+        <CurrentComponent />
+      </div>
 
       {/* Desktop Arrows */}
       <div className="hidden md:block">
@@ -78,7 +81,11 @@ export default function PageSlider() {
             stroke="currentColor"
             strokeWidth={2}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
         </button>
 
@@ -94,45 +101,57 @@ export default function PageSlider() {
             stroke="currentColor"
             strokeWidth={2}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </button>
       </div>
 
       {/* Mobile Arrows */}
-<div className="flex gap-20 justify-center absolute bottom-4 left-1/2 -translate-x-1/2 md:hidden z-20">
-  <button
-    onClick={goToPrev}
-    className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/50 text-white shadow-lg hover:scale-110 transition-transform duration-300"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    > 
-      <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-    </svg>
-  </button>
+      <div className="flex gap-20 justify-center absolute bottom-4 left-1/2 -translate-x-1/2 md:hidden z-20">
+        <button
+          onClick={goToPrev}
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/50 text-white shadow-lg hover:scale-110 transition-transform duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
+        </button>
 
-  <button
-    onClick={goToNext}
-    className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/50 text-white shadow-lg hover:scale-110 transition-transform duration-300"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-    </svg>
-  </button>
-</div>
+        <button
+          onClick={goToNext}
+          className="flex items-center justify-center w-12 h-12 rounded-full bg-white/20 hover:bg-white/50 text-white shadow-lg hover:scale-110 transition-transform duration-300"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
+        </button>
+      </div>
 
       {/* Navigation Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-20">
