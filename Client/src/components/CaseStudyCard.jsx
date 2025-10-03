@@ -34,7 +34,7 @@ export default function CaseStudyCard() {
           <h1 className="mt-2 sm:mt-3 text-2xl sm:text-3xl md:text-4xl font-extrabold leading-snug">
             Innovation at Every Touchpoint:
             <br />
-            <span className="bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent text-lg sm:text-2xl md:text-3xl">
+            <span className="bg-orange-400 bg-clip-text text-transparent text-lg sm:text-2xl md:text-3xl">
               Scaling Innovation for Growth
             </span>
           </h1>
@@ -47,7 +47,7 @@ export default function CaseStudyCard() {
           <motion.button
             whileHover={{ scale: 1.05, y: -1 }}
             whileTap={{ scale: 0.95 }}
-            className="mt-5 sm:mt-8 flex items-center gap-2 px-6 sm:px-8 py-2 sm:py-3 bg-gradient-to-r from-teal-500 to-blue-500 hover:from-teal-600 hover:to-blue-600 text-white rounded-lg font-semibold shadow-lg text-sm sm:text-base transition-all duration-300"
+            className="mt-5 sm:mt-8 flex items-center gap-2 px-6 sm:px-8 py-2 sm:py-3 bg-orange-500/60 hover:from-orange-600 hover:to-orange-600 text-white rounded-lg font-semibold shadow-lg text-sm sm:text-base transition-all duration-300"
           >
             Read More <ArrowRight size={18} />
           </motion.button>
@@ -70,7 +70,7 @@ export default function CaseStudyCard() {
   </h3>
   <p className="text-gray-300 text-sm md:text-base leading-relaxed">
     Boden achieved a{" "}
-    <span className="text-teal-400 font-semibold">30% increase</span>{" "}
+    <span className="text-orange-400 font-semibold">30% increase</span>{" "}
     in customer engagement and built a seamless digital journey with
     scalable design solutions.
   </p>

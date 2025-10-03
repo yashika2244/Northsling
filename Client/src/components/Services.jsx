@@ -38,7 +38,7 @@ export default function Services() {
   return (
  <section className="bg-gray-900 text-white py-16 px-6 lg:px-20">
   <div className="max-w-7xl mx-auto text-center mb-12">
-    <h2 className="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+    <h2 className="text-4xl font-extrabold mb-4 text-transparent bg-clip-text bg-orange-400">
       Explore Our Services
     </h2>
     <p className="text-gray-400 leading-relaxed max-w-2xl mx-auto">

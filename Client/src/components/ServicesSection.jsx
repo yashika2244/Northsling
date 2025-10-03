@@ -14,43 +14,43 @@ const services = [
     title: "Customer Experience",
     description:
       "Designing experiences that convert, retain, and truly delight customers at scale.",
-    icon: <UserIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <UserIcon className="h-8 w-8 text-orange-400" />,
   },
   {
     title: "Digital Engineering",
     description:
       "Building future-proof platforms with speed, precision, and engineering craftsmanship.",
-    icon: <ComputerDesktopIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <ComputerDesktopIcon className="h-8 w-8 text-orange-400" />,
   },
   {
     title: "AI and Analytics",
     description:
       "Transforming raw data into foresight, action, and competitive advantage.",
-    icon: <ChartBarIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <ChartBarIcon className="h-8 w-8 text-orange-400" />,
   },
   {
     title: "Digital Marketing",
     description:
       "Driving demand and visibility with performance-led digital marketing campaigns.",
-    icon: <MegaphoneIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <MegaphoneIcon className="h-8 w-8 text-orange-400" />,
   },
   {
     title: "Cloud & DevOps",
     description:
       "Powering agility and uptime through automated, scalable cloud-native infrastructure.",
-    icon: <CloudIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <CloudIcon className="h-8 w-8 text-orange-400" />,
   },
   {
     title: "Cybersecurity",
     description:
       "Fortifying businesses with real-time protection and compliance.",
-    icon: <ShieldCheckIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <ShieldCheckIcon className="h-8 w-8 text-orange-400" />,
   },
   {
     title: "Managed Services",
     description:
       "Keeping digital always-on with 24x7 support and continuous improvement.",
-    icon: <CogIcon className="h-8 w-8 text-yellow-400" />,
+    icon: <CogIcon className="h-8 w-8 text-orange-400" />,
   },
 ];
 
@@ -75,7 +75,7 @@ export default function ServicesSection() {
             <p className="text-gray-300 mb-4">{service.description}</p>
             <a
               href="#"
-              className="text-yellow-400 font-semibold hover:underline"
+              className="text-orange-400 font-semibold hover:underline"
             >
               Learn more →
             </a>

@@ -75,9 +75,14 @@ export default function Hero1({ showSVG = true }) {
   </h1>
 
   {/* Subheading */}
-  <p className="mt-4 sm:mt-4 md:mt-5 text-gray-300 text-lg sm:text-lg md:text-xl drop-shadow-sm max-w-full sm:max-w-lg">
-    Driving innovation with <span className="text-orange-400 font-semibold">AI-powered solutions</span> to help businesses optimize processes, enhance customer experiences, and gain a competitive edge.
-  </p>
+ <p className="mt-4 sm:mt-4 md:mt-5 text-gray-300 text-lg sm:text-lg md:text-xl drop-shadow-sm max-w-full sm:max-w-lg">
+  Driving innovation with <span className="text-orange-400 font-semibold">AI-powered solutions</span> to help businesses optimize processes, enhance customer experiences, and gain a competitive edge.
+  {/* Extra mobile-only text */}
+  <span className="block md:hidden">
+    We make sure your business stays ahead in the digital era by leveraging the latest AI technologies.
+  </span>
+</p>
+
 
   {/* Buttons */}
   <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4">
