@@ -11,7 +11,7 @@ export default function Hero1({ showSVG = true }) {
           viewBox="0 0 800 800"
           className="absolute left-[55%] top-[30%] -translate-x-1/2 -translate-y-1/2 h-[150%] w-[150%] md:h-[130%] md:w-[130%] z-10"
           initial={{ rotate: 0, scale: 1 }}
-          animate={{ rotate: 360, scale: [1.15, 1.25, 1.15] }}
+          animate={{ rotate: 360, scale: [1.15, 1.25, 1.15] }} 
           transition={{ repeat: Infinity, duration: 80, ease: "linear" }}
         >
           <defs>
@@ -61,50 +61,48 @@ export default function Hero1({ showSVG = true }) {
       )}
 
       {/* ===== Content ===== */}
-      <div className="relative z-30 max-w-3xl text-left px-4 sm:px-6 md:px-0 lg:ml-10 mt-[-1rem] md:mt-[-3rem] lg:mt-[-180px] flex flex-col md:justify-center min-h-screen">
-        {/* Tagline */}
-        <p className="text-base sm:text-base md:text-lg text-orange-400 font-medium tracking-wide mb-3 sm:mb-2">
-          Innovating the Future of Digital Solutions
-        </p>
+ <div className="relative z-30 max-w-3xl text-left px-4 sm:px-6 md:px-0 lg:ml-10 flex flex-col md:justify-center mt-6 md:mt-[-40px] lg:mt-[-80px]">
+  {/* Tagline */}
+  <p className="text-base sm:text-base md:text-lg text-orange-400 font-medium tracking-wide mb-3 sm:mb-2">
+    Innovating the Future of Digital Solutions
+  </p>
 
-        {/* Heading */}
-        <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-snug sm:leading-snug md:leading-tight drop-shadow-md">
-          Welcome to <span className="text-orange-400">Northsling</span>
-        </h1>
+  {/* Heading */}
+  <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-snug sm:leading-snug md:leading-tight drop-shadow-md">
+    Welcome to <span className="text-orange-400">Northsling</span>
+  </h1>
 
-        {/* Subheading */}
-        <p className="mt-4 sm:mt-4 md:mt-5 text-gray-300 text-lg sm:text-lg md:text-xl drop-shadow-sm max-w-full sm:max-w-lg">
-          Driving innovation with{" "}
-          <span className="text-orange-400 font-semibold">
-            AI-powered solutions
-          </span>{" "}
-          to help businesses optimize processes, enhance customer experiences,
-          and gain a competitive edge.
-          <span className="block md:hidden">
-            We make sure your business stays ahead in the digital era by
-            leveraging the latest AI technologies.
-          </span>
-        </p>
+  {/* Subheading */}
+  <p className="mt-4 sm:mt-4 md:mt-5 text-gray-300 text-lg sm:text-lg md:text-xl drop-shadow-sm max-w-full sm:max-w-lg">
+    Driving innovation with{" "}
+    <span className="text-orange-400 font-semibold">
+      AI-powered solutions
+    </span>{" "}
+    to help businesses optimize processes, enhance customer experiences,
+    and gain a competitive edge.
+  </p>
 
-        {/* Buttons */}
-        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4">
-          <motion.button
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg shadow-md transition-all duration-300 hover:from-orange-600 hover:to-orange-500"
-          >
-            Explore Solutions
-          </motion.button>
+  {/* Buttons */}
+  <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-4">
+    <motion.button
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.97 }}
+      className="px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-lg shadow-md transition-all duration-300 hover:from-orange-600 hover:to-orange-500"
+    >
+      Explore Solutions
+    </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            className="px-6 sm:px-8 py-3 sm:py-4 border border-orange-500 text-orange-400 font-semibold rounded-lg transition-all duration-300 hover:bg-orange-600 hover:text-white hover:border-transparent shadow-sm"
-          >
-            Contact Us
-          </motion.button>
-        </div>
-      </div>
+    <motion.button
+      whileHover={{ scale: 1.04 }}
+      whileTap={{ scale: 0.97 }}
+      className="px-6 sm:px-8 py-3 sm:py-4 border border-orange-500 text-orange-400 font-semibold rounded-lg transition-all duration-300 hover:bg-orange-600 hover:text-white hover:border-transparent shadow-sm"
+    >
+      Contact Us
+    </motion.button>
+  </div>
+</div>
+
+
     </section>
   );
 }
