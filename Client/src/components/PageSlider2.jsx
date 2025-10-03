@@ -28,7 +28,7 @@ export default function Slider() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev === length - 1 ? 0 : prev + 1));
-    }, 8000);
+    }, 6000);
     return () => clearInterval(timer);
   }, [length]);
 
@@ -98,7 +98,7 @@ export default function Slider() {
       </AnimatePresence>
 
       {/* Bottom Navigation */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full shadow-lg z-20">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-4  px-4 py-2   z-20">
         <button
           onClick={prevSlide}
           className="bg-white/30 hover:bg-white/60 text-black p-3 rounded-full shadow-md transition"
