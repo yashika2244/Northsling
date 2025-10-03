@@ -2,70 +2,51 @@ import React from "react";
 
 export default function Hero2({ currentPage, setCurrentPage }) {
   return (
-    <section 
-      className="relative flex flex-col md:pt-20 md:flex-col items-center justify-start md:justify-center h-screen text-center overflow-hidden"
-      style={{
-        backgroundImage: `url('/bg-image1.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+    <section
+      className="relative flex flex-col md:pt-20 items-center justify-start md:justify-center h-screen text-center overflow-hidden bg-gray-100"
+   
     >
-      {/* Dark Overlay with Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/70 z-0"></div>
+      {/* Soft Overlay for depth */}
+      <div className="absolute inset-0 bg-white/20 z-0 backdrop-blur-sm"></div>
 
       {/* Content */}
-      <div 
-        className="
-          relative z-10 px-6 max-w-4xl flex flex-col items-center 
-          justify-start pt-20 space-y-6   /* Mobile: top aligned with padding */
-          md:justify-center md:pt-0       /* Desktop: center aligned */
-        "
-      >
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg leading-tight">
-          Innovating the <span className="text-cyan-400">Future</span>
+      <div className="relative z-10 px-6 max-w-4xl flex flex-col items-center justify-start pt-20 space-y-6 md:justify-center md:pt-0">
+        <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 drop-shadow-md leading-tight">
+          Innovating the <span className="text-orange-500">Future</span>
         </h1>
 
-        <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
+        <p className="mt-4 md:mt-6 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
           We craft modern solutions with cutting-edge technology to drive 
           innovation, deliver measurable impact, and help your business 
           thrive in the digital era.
         </p>
 
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed drop-shadow-sm">
+        <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
           From AI-powered platforms to intelligent automation and data-driven 
           strategies, our mission is to simplify complexity and unlock new 
-          opportunities. 
+          opportunities.
         </p>
 
-        <div className="mt-8 flex flex-row justify-center gap-5">
+        <div className="mt-8 flex flex-row flex-wrap justify-center gap-5">
           <a
             href="/about"
-            className="px-8 py-4 rounded-md bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-600 text-white font-semibold 
-                       shadow-lg hover:scale-105 hover:shadow-2xl transition transform duration-300"
+            className="px-8 py-4 rounded-xl bg-white/20 backdrop-blur-sm text-orange-600 font-semibold 
+                       shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300"
           >
             Learn More
           </a>
           <a
             href="/services"
-            className="px-8 py-4 rounded-md border-2 border-gray-400 text-gray-200 
-                       hover:bg-gray-200 hover:text-gray-900 hover:scale-105 hover:shadow-lg transition transform duration-300"
+            className="px-8 py-4 rounded-xl border-2 border-orange-400 text-orange-600 
+                       hover:bg-orange-100 hover:text-orange-700 hover:scale-105 hover:shadow-lg transition transform duration-300"
           >
             Our Services
           </a>
         </div>
       </div>
-      {/* Dots */}
-<div className="flex justify-center gap-3 mt-auto mb-6 z-10 relative">
-  {[0,1,2,3].map((i) => (
-    <button key={i}
-            onClick={() => setCurrentPage(i)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              i===currentPage ? "bg-white scale-125 shadow-md" : "bg-gray-400 hover:bg-white/70"
-            }`}
-    ></button>
-  ))}
-</div>
+
+      {/* Navigation Dots */}
+  
     </section>
   );
 }

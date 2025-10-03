@@ -11,12 +11,14 @@ import Services from "../components/Services";
 import Locations from "../components/Locations";
 import JoinTeam from "../components/JoinTeam";
 import HeroSection from "../components/HeroSection";
+import ServicesSection from "../components/ServicesSection";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       <PageSlider />
       <DigitalLensSection />
+      <ServicesSection/>
       <CaseStudyCard />
      
       <PartnersSection/>
@@ -26,7 +28,6 @@ export default function Home() {
       <Services/>
       <Locations/>
       <JoinTeam/>
-      <HeroSection/>
     </div>
   );
 }

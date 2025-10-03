@@ -29,13 +29,13 @@ export default function Locations() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-black to-gray-900 text-white px-6 sm:px-10 py-16">
+    <div className="min-h-screen bg-orange-50 text-gray-800 px-6 sm:px-10 py-16">
       <div className="text-center mb-10">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+          className="text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent"
         >
           Our Locations
         </motion.h1>
@@ -48,8 +48,8 @@ export default function Locations() {
               onClick={() => setActiveTab(tab)}
               className={`uppercase tracking-widest px-5 py-2 rounded-full transition-all duration-300 ${
                 activeTab === tab
-                  ? "bg-cyan-500 text-black font-semibold shadow-lg"
-                  : "text-gray-400 hover:text-white hover:bg-gray-800"
+                  ? "bg-orange-400 text-white font-semibold shadow-lg"
+                  : "text-gray-600 hover:text-orange-600 hover:bg-orange-100"
               }`}
             >
               {tab}
@@ -64,7 +64,7 @@ export default function Locations() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder="Search for a country..."
-            className="px-4 py-2 w-full max-w-md rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-cyan-400 text-gray-200 placeholder-gray-400"
+            className="px-4 py-2 w-full max-w-md rounded-lg bg-white border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400 text-gray-800 placeholder-gray-400 shadow-sm"
           />
         </div>
       </div>
@@ -82,15 +82,15 @@ export default function Locations() {
               transition={{ type: "spring", stiffness: 200 }}
               className="cursor-pointer"
             >
-              <div className="overflow-hidden rounded-2xl shadow-xl bg-gray-900 border border-gray-800 group">
+              <div className="overflow-hidden rounded-2xl shadow-lg bg-white border border-orange-200 group">
                 <div className="relative">
                   <img
                     src={loc.img}
                     alt={loc.country}
-                    className="h-52 w-full object-cover transform group-hover:scale-110 transition duration-500"
+                    className="h-52 w-full object-cover transform group-hover:scale-105 transition duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-80"></div>
-                  <h3 className="absolute bottom-4 left-1/2 -translate-x-1/2 text-2xl font-bold tracking-wide text-white drop-shadow-lg">
+                  <div className="absolute inset-0 opacity-80"></div>
+                  <h3 className="absolute bottom-4 left-1/2 -translate-x-1/2 text-2xl font-bold tracking-wide text-orange-500 drop-shadow-lg">
                     {loc.country}
                   </h3>
                 </div>
@@ -98,7 +98,7 @@ export default function Locations() {
             </motion.div>
           ))
         ) : (
-          <div className="col-span-full text-center text-gray-400 text-lg">
+          <div className="col-span-full text-center text-gray-500 text-lg">
             No locations found.
           </div>
         )}

@@ -9,64 +9,16 @@ body {
   position: relative;
 }
 
-/* Optional very light noise overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  opacity: 0.02; /* lighter than before */
-  pointer-events: none;
-  z-index: 0;
+
+
+.animate-slideIn-left {
+  animation: slideIn-left 1.2s ease forwards;
+}
+.animate-slideIn-right {
+  animation: slideIn-right 1.2s ease forwards;
 }
 
-/* Twinkling Stars (subtle) */
-.twinkle {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  overflow: hidden;
-}
 
-.star {
-  position: absolute;
-  width: var(--size, 2px);
-  height: var(--size, 2px);
-  background: white;
-  border-radius: 50%;
-  opacity: 0.5; /* reduced brightness */
-  filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.6));
-  animation: blink var(--duration, 4s) infinite ease-in-out alternate;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 0.2; transform: scale(0.8); }
-  50% { opacity: 0.8; transform: scale(1.1); }
-}
-
-/* Floating Orbs (lighter + smaller blur) */
-.orbs {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.orb {
-  position: absolute;
-  width: var(--size, 150px);
-  height: var(--size, 150px);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,255,255,0.15), transparent 70%);
-  filter: blur(25px); /* reduced blur */
-  animation: float var(--duration, 25s) ease-in-out infinite alternate;
-}
-
-@keyframes float {
-  0% { transform: translateY(0) translateX(0); }
-  50% { transform: translateY(-30px) translateX(20px); }
-  100% { transform: translateY(0) translateX(0); }
-}
 
 
 @keyframes slideIn-right {
