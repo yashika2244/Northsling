@@ -54,15 +54,15 @@ export default function Services() {
   const [activeCategory, setActiveCategory] = useState("Customer Experience");
 
   return (
-    <div className="min-h-screen font-sans mx-3 px-2 rounded-2xl mt-2 bg-gray-100 flex flex-col md:flex-row pt-20 md:pt-0">
+    <div className="min-h-screen font-sans mx-3 px-2  rounded-2xl mt-2 bg-gray-100 flex flex-col md:flex-row md:pt-0">
       {/* Sidebar */}
-      <div className="w-full md:w-72 md:mt-2 bg-white/80 backdrop-blur-xl shadow-md border-b md:border-b-0 md:border-r border-orange-200 p-3 sm:p-5 flex flex-col sticky top-16 z-10 rounded-none md:rounded-2xl">
+      <div className="w-full md:w-72 md:mt-2 bg-white/80 backdrop-blur-xl  shadow-md border-b md:border-b-0 md:border-r border-orange-200 p-3 sm:p-5 flex flex-col sticky top-16 z-10 rounded-2xl">
         <h1 className="text-xl sm:text-2xl font-extrabold mb-3 sm:mb-5 text-black tracking-tight text-center md:text-left">
           Our Services
         </h1>
 
         {/* Category List */}
-        <div className="flex md:block overflow-x-auto custom-scroll md:overflow-visible space-x-2 sm:space-x-3 md:space-x-0 md:space-y-3 scrollbar-hide pb-1">
+        <div className="flex md:block overflow-x-auto custom-scroll  md:overflow-visible space-x-2 sm:space-x-3 md:space-x-0 md:space-y-3 scrollbar-hide pb-1">
           {Object.keys(servicesData).map((category) => (
             <motion.div
               whileHover={{ scale: 1.03 }}

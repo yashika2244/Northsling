@@ -8,6 +8,7 @@ import CompanyAbout from "./pages/Company";
 import CompanyInsights from "./pages/Investers";
 import Resources from "./pages/Resources";
 import Success from "./pages/success/Success";
+import NotFound from "./pages/NotFound";
 
 function AppWrapper() {
   const location = useLocation();
@@ -23,6 +24,7 @@ function AppWrapper() {
         <Route path="/investors" element={<CompanyInsights />} />
         <Route path="/success-stories" element={<Success />} />
         <Route path="/resources" element={<Resources />} />
+           <Route path="*" element={<NotFound />} />
       </Routes>
 
       {/* Footer sirf home aur success stories page pe dikhe */}

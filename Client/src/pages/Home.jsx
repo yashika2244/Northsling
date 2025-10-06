@@ -12,6 +12,7 @@ import JoinTeam from "../components/JoinTeam";
 import HeroSection from "../components/HeroSection";
 import ServicesSection from "../components/ServicesSection";
 import Hero1 from "../components/Hero1";
+import ClientsSection from "../components/ClientsSection";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero1/>
       <DigitalLensSection />
       <ServicesSection/>
+      <ClientsSection/>
       {/* <CaseStudyCard /> */}
      
       <PartnersSection/>
