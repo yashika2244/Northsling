@@ -9,6 +9,7 @@ import CompanyInsights from "./pages/Investers";
 import Resources from "./pages/Resources";
 import Success from "./pages/success/Success";
 import NotFound from "./pages/NotFound";
+import MainServicesPage from "./pages/services/MainServicesPage";
 
 function AppWrapper() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function AppWrapper() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+    <Route path="/services/:serviceId" element={<MainServicesPage />} /> 
         <Route path="/industries" element={<IndustrySolutions />} />
         <Route path="/company" element={<CompanyAbout />} />
         <Route path="/investors" element={<CompanyInsights />} />

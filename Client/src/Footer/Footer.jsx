@@ -30,7 +30,7 @@ export default function Footer() {
         <div>
           <h3 className="text-gray-900 font-bold text-xl mb-6">Services</h3>
           <ul className="space-y-4 text-sm">
-            {["Enterprise Solutions", "Open-Source Tools", "AI Innovations", "Consulting", "Cloud & Security", "Digital Transformation"].map((item, idx) => (
+            {["Customer Experience", "Digital Engineering", "AI and Analytics", "Cloud & DevOps", "Cybersecurity", "Integrated Digital Marketing", "Managed Services","Products"].map((item, idx) => (
               <li key={idx} className="hover:text-orange-500 relative w-fit group cursor-pointer transition-colors duration-300">
                 {item}
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
@@ -41,9 +41,9 @@ export default function Footer() {
 
         {/* Column 3: Resources */}
         <div>
-          <h3 className="text-gray-900 font-bold text-xl mb-6">Resources</h3>
+          <h3 className="text-gray-900 font-bold text-xl mb-6">Company</h3>
           <ul className="space-y-4 text-sm">
-            {["Blog", "Case Studies", "White Papers", "Reports", "Webinars", "Events"].map((item, idx) => (
+            {["About the Company", "Board of Directors", "Careers / Job Openings", "Awards", "Events & Talk", "Northsling.Foundations"].map((item, idx) => (
               <li key={idx} className="hover:text-orange-500 relative w-fit group cursor-pointer transition-colors duration-300">
                 {item}
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-orange-400 group-hover:w-full transition-all duration-300"></span>
@@ -54,9 +54,9 @@ export default function Footer() {
 
         {/* Column 4: Policies */}
         <div>
-          <h3 className="text-gray-900 font-bold text-xl mb-6">Policies</h3>
+          <h3 className="text-gray-900 font-bold text-xl mb-6">Press Kit</h3>
           <ul className="space-y-4 text-sm">
-            {["Privacy Policy", "Cookie Policy", "Accessibility", "Code of Conduct", "Terms of Service"].map((item, idx) => (
+            {["Northsling. Profile", "Logo & Image Gallery"].map((item, idx) => (
               <li key={idx} className="hover:text-orange-500 relative w-fit group cursor-pointer transition-colors duration-300">
                 {item}
                 <span className="absolute left-0 bottom-0 h-0.5 w-0 bg-orange-400 group-hover:w-full transition-all duration-300"></span>

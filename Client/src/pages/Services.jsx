@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const servicesData = {
   "Customer Experience": [
@@ -41,18 +42,18 @@ const categoryImages = {
   "Cloud Services & DevOps":
     "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80",
   Cybersecurity:
-    "https://images.unsplash.com/photo-1581090700227-7c1e5fd0e01e?auto=format&fit=crop&w=1200&q=80",
+    "divimg3.webp",
   "Integrated Digital Marketing":
     "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1200&q=80",
   "Managed Services":
     "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
   Products:
-    "https://images.unsplash.com/photo-1581093588401-0b4b59ed0e53?auto=format&fit=crop&w=1200&q=80",
+    "product.jpg",
 };
 
 export default function Services() {
   const [activeCategory, setActiveCategory] = useState("Customer Experience");
-
+const navigate = useNavigate();
   return (
     <div className="min-h-screen font-sans mx-3 px-2  rounded-2xl mt-2 bg-gray-100 flex flex-col md:flex-row md:pt-0">
       {/* Sidebar */}
@@ -97,45 +98,53 @@ export default function Services() {
           </div>
 
           {/* Services List */}
-          <AnimatePresence mode="wait">
-            {servicesData[activeCategory].length > 0 ? (
-              <motion.ul
-                key={activeCategory}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 mb-10"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                {servicesData[activeCategory].map((service) => (
-                  <motion.li
-                    key={service}
-                    whileHover={{ scale: 1.03 }}
-                    className="p-4 sm:p-5 bg-white rounded-xl shadow-md hover:shadow-xl border border-orange-100 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-gray-800 text-sm sm:text-base">
-                        {service}
-                      </span>
-                      <motion.span
-                        whileHover={{ x: 5 }}
-                        className="text-orange-500 text-lg font-bold"
-                      >
-                        ↗
-                      </motion.span>
-                    </div>
-                    <p className="text-gray-500 mt-2 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      Learn more about our {service.toLowerCase()} solutions.
-                    </p>
-                  </motion.li>
-                ))}
-              </motion.ul>
-            ) : (
-              <p className="text-gray-500 mb-8 text-center text-sm sm:text-base">
-                No services available in this category yet.
-              </p>
-            )}
-          </AnimatePresence>
+        <AnimatePresence mode="wait">
+  {servicesData[activeCategory].length > 0 ? (
+    <motion.ul
+      key={activeCategory}
+      className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-5 mb-10"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.4 }}
+    >
+      {servicesData[activeCategory].map((service) => (
+        <motion.li
+          key={service}
+          whileHover={{ scale: 1.03 }}
+          className="p-4 sm:p-5 bg-white rounded-xl shadow-md hover:shadow-xl border border-orange-100 transition-all duration-300 cursor-pointer group"
+       onClick={() => {
+  const routeName = service
+    .toLowerCase()
+    .replace(/\//g, "-")  // <-- added this
+    .replace(/\s+/g, "-");
+  navigate(`/services/${routeName}`);
+}}
+        >
+          <div className="flex justify-between items-center">
+            <span className="font-semibold text-gray-800 text-sm sm:text-base">
+              {service}
+            </span>
+            <motion.span
+              whileHover={{ x: 5 }}
+              className="text-orange-500 text-lg font-bold"
+            >
+              ↗
+            </motion.span>
+          </div>
+          <p className="text-gray-500 mt-2 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            Learn more about our {service.toLowerCase()} solutions.
+          </p>
+        </motion.li>
+      ))}
+    </motion.ul>
+  ) : (
+    <p className="text-gray-500 mb-8 text-center text-sm sm:text-base">
+      No services available in this category yet.
+    </p>
+  )}
+</AnimatePresence>
+
         </div>
 
         {/* Right Column: Dynamic Image */}

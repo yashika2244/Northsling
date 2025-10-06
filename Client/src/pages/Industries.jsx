@@ -45,9 +45,9 @@ const categoryImages = {
   "Banking & Finance":
     "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
   Insurance:
-    "https://images.unsplash.com/photo-1581090700227-7c1e5fd0e01e?auto=format&fit=crop&w=1200&q=80",
+    "https://tse4.mm.bing.net/th/id/OIP.ssZpaxXi4G1gcAhVvguXPwHaEk?rs=1&pid=ImgDetMain&o=7&rm=3",
   "Life Sciences":
-    "https://images.unsplash.com/photo-1581094456227-7c1e5fd0e01e?auto=format&fit=crop&w=1200&q=80",
+    "https://tse3.mm.bing.net/th/id/OIP.hmb5nlZA7jT3jLxAF3xUegHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
   "Retail and FMCG":
     "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=1200&q=80",
 };
