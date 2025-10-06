@@ -69,3 +69,62 @@ body {
   from { transform: translateX(0%); }
   to   { transform: translateX(100%); }
 }
+
+/* 🌟 Custom Scrollbar — Visible on Desktop Only */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f97316, #fb923c);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ea580c, #f97316);
+  }
+}
+
+/* 🧡 Completely Hidden Scrollbar on Mobile */
+@media (max-width: 767px) {
+  /* Hide scrollbar visually */
+  ::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent;
+  }
+
+  /* Remove space scrollbar occupies */
+  html, body, * {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+    overflow: -moz-scrollbars-none; /* old Firefox support */
+  }
+
+  /* Prevent even hover flicker */
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+}
+/* Allow scrolling but hide scrollbar */
+html, body {
+  overflow: auto;             /* scrolling works */
+  height: 100%;
+  scrollbar-width: none;       /* Firefox */
+  -ms-overflow-style: none;    /* IE & Edge */
+}
+
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;     /* completely invisible */
+}

@@ -1,28 +1,42 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-import Navbar from "./Header/Navbar"
-import Home from "./pages/Home"
-import Footer from "./Footer/Footer"
-// import About from "./pages/About"
-// import Services from "./pages/Services"
-// import Cases from "./pages/Cases"
-// import Careers from "./pages/Careers"
-// import Contact from "./pages/Contact"
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import Navbar from "./Header/Navbar";
+import Home from "./pages/Home";
+import Footer from "./Footer/Footer";
+import Services from "./pages/Services";
+import IndustrySolutions from "./pages/Industries";
+import CompanyAbout from "./pages/Company";
+import CompanyInsights from "./pages/Investers";
+import Resources from "./pages/Resources";
+import Success from "./pages/success/Success";
+
+function AppWrapper() {
+  const location = useLocation();
+
+  return (
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/industries" element={<IndustrySolutions />} />
+        <Route path="/company" element={<CompanyAbout />} />
+        <Route path="/investors" element={<CompanyInsights />} />
+        <Route path="/success-stories" element={<Success />} />
+        <Route path="/resources" element={<Resources />} />
+      </Routes>
+
+      {/* Footer sirf home aur success stories page pe dikhe */}
+      {(location.pathname === "/" || location.pathname === "/success-stories") && <Footer />}
+    </>
+  );
+}
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/cases" element={<Cases />} />
-        <Route path="/careers" element={<Careers />} />
-        <Route path="/contact" element={<Contact />} /> */}
-      </Routes>
-           <Footer /> 
+      <AppWrapper />
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;
