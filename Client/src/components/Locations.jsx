@@ -35,7 +35,7 @@ export default function Locations() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl sm:text-5xl font-extrabold mb-6 bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent"
+          className="text-4xl sm:text-5xl font-extrabold mb-6 bg-gray-700 bg-clip-text text-transparent"
         >
           Our Locations
         </motion.h1>

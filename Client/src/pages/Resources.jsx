@@ -3,6 +3,7 @@ import CareerSection from './career/CareerSection'
 import CreateCareerSection from './career/CreateCareerSection'
 import WhoWeAre from './career/WhoWeAre'
 import CareerStory from './career/CareerStory'
+import OurPeople from './career/OurPeople'
 
 function Resources() {
   return (
@@ -10,6 +11,7 @@ function Resources() {
       <CareerSection/>
       <WhoWeAre/>
       <CreateCareerSection/>
+      <OurPeople/>
       <CareerStory/>
     </div>
   )
