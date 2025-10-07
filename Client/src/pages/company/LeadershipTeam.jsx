@@ -76,7 +76,7 @@ export default function LeadershipTeam() {
             boxShadow: "0 12px 25px rgba(249, 115, 22, 0.4)",
           }}
           whileTap={{ scale: 0.95 }}
-          className="px-12 py-4 font-semibold rounded-full text-white bg-gradient-to-r from-orange-500 via-pink-500 to-purple-500 bg-[length:200%_200%] transition-all duration-500 tracking-wide shadow-lg"
+          className="px-12 py-4 font-semibold rounded-full text-white bg-orange-500 bg-[length:200%_200%] transition-all duration-500 tracking-wide shadow-lg"
         >
           SEE ALL
         </motion.button>
