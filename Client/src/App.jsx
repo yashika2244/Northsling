@@ -9,28 +9,24 @@ import CompanyInsights from "./pages/Investers";
 import Resources from "./pages/Resources";
 import Success from "./pages/success/Success";
 import NotFound from "./pages/NotFound";
-import MainServicesPage from "./pages/services/MainServicesPage";
 
 function AppWrapper() {
-  const location = useLocation();
-
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-    <Route path="/services/:serviceId" element={<MainServicesPage />} /> 
         <Route path="/industries" element={<IndustrySolutions />} />
         <Route path="/company" element={<CompanyAbout />} />
         <Route path="/investors" element={<CompanyInsights />} />
         <Route path="/success-stories" element={<Success />} />
         <Route path="/resources" element={<Resources />} />
-           <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
-      {/* Footer sirf home aur success stories page pe dikhe */}
-      {(location.pathname === "/" || location.pathname === "/success-stories") && <Footer />}
+      {/* Footer on all pages */}
+      <Footer />
     </>
   );
 }

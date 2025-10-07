@@ -17,52 +17,50 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-1 z-50 bg-white shadow-sm border-b border-orange-100 rounded-full mx-4">
-   <div className="max-w-7xl flex items-center justify-between pl-3 py-2 w-full">
-  {/* Logo */}
-  <Link to="/" className="flex items-center space-x-2">
-    <div className="h-14 w-14 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold">
-      NS
-    </div>
-    <span className="font-bold text-xl text-gray-800">Northsling</span>
-  </Link>
+      <div className="max-w-7xl flex items-center justify-between pl-3 py-2 w-full">
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-2">
+          <div className="h-14 w-14 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold">
+            NS
+          </div>
+          <span className="font-bold text-xl text-gray-800">Northsling</span>
+        </Link>
 
-  {/* Desktop Navigation (centered) */}
-<nav className="hidden md:flex justify-center items-center bg-gray-100 rounded-full py-2 px-6 shadow-sm cursor-pointer">
+        {/* Desktop Navigation (centered) */}
+        <nav className="hidden md:flex justify-center items-center bg-gray-100 rounded-full py-2 px-6 shadow-sm cursor-pointer">
+          {navLinks.map((link, idx) => (
+            <Link
+              key={idx}
+              to={link.path}
+              onMouseEnter={() => navigate(link.path)}
+              className="flex items-center  px-4 py-2 rounded-full text-xs font-semibold text-gray-600 hover:text-orange-600 hover:bg-white transition-all duration-200"
+            >
+              {link.label}
+              {!link.noIcon && (
+                <ChevronDown
+                  size={12}
+                  className="ml-1 text-gray-400 transition-colors duration-200"
+                />
+              )}
+            </Link>
+          ))}
+        </nav>
 
-    {navLinks.map((link, idx) => (
-      <Link
-        key={idx}
-        to={link.path}
-        onMouseEnter={() => navigate(link.path)}
-        className="flex items-center  px-4 py-2 rounded-full text-xs font-semibold text-gray-600 hover:text-orange-600 hover:bg-white transition-all duration-200"
-      >
-        {link.label}
-        {!link.noIcon && (
-          <ChevronDown
-            size={12}
-            className="ml-1 text-gray-400 transition-colors duration-200"
-          />
-        )}
-      </Link>
-    ))}
-  </nav>
+        {/* CTA Button (right) */}
+        <div className="hidden md:block">
+          <button className="px-5 py-2 bg-orange-500 text-white text-sm rounded-full font-medium hover:bg-orange-600 transition">
+            Book a Free Consultation
+          </button>
+        </div>
 
-  {/* CTA Button (right) */}
-  <div className="hidden md:block">
-    <button className="px-5 py-2 bg-orange-500 text-white text-sm rounded-full font-medium hover:bg-orange-600 transition">
-      Book a Free Consultation
-    </button>
-  </div>
-
-  {/* Mobile Menu Toggle */}
-  <button
-    onClick={() => setMobileOpen(!mobileOpen)}
-    className="md:hidden text-orange-700 px-6"
-  >
-    {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-  </button>
-</div>
-
+        {/* Mobile Menu Toggle */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="md:hidden text-orange-700 px-6"
+        >
+          {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+      </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
