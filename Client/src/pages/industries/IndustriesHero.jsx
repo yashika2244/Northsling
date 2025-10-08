@@ -5,7 +5,7 @@ import { ArrowDown } from "lucide-react";
 
 export default function IndustriesHero() {
   return (
-    <section className="relative overflow-hidden -mt-18 bg-gradient-to-br from-orange-100 via-white to-orange-50 text-gray-900 py-32 px-6 md:px-20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-orange-100 via-white to-orange-50 text-gray-900 py-32 px-6 md:px-20">
       {/* ====== Floating Gradient Blobs ====== */}
       <motion.div
         className="absolute top-[-20%] left-[-10%] w-[35rem] h-[35rem] bg-orange-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
@@ -19,7 +19,7 @@ export default function IndustriesHero() {
       />
 
       {/* ====== Content Section ====== */}
-      <div className="relative z-10 flex flex-col items-center text-center md:mt-18">
+      <div className="relative z-10 flex flex-col items-center text-center mt-20 ">
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

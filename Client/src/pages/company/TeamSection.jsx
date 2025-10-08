@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function TeamSection() {
   return (
-    <section className="relative h-screen w-full overflow-hidden -mt-18">
+    <section className="relative h-screen w-full overflow-hidden ">
       {/* ===== Background Image ===== */}
       <div
         className="absolute inset-0 bg-cover bg-top "

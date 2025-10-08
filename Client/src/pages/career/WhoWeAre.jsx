@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function WhoWeAre() {
   return (
-    <section className="relative bg-white text-gray-900 py-28 px-6 md:px-20 overflow-hidden">
+    <section className="relative bg-white text-gray-900 py-6 px-6 md:px-20 overflow-hidden">
       <div className="max-w-5xl mx-auto">
         {/* Subheading */}
         <motion.h4

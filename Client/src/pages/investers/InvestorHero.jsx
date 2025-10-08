@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function InvestorHero() {
   return (
-    <section className="relative -mt-18 bg-gradient-to-br from-orange-50 via-white to-gray-100 text-gray-900 py-28 px-6 md:px-20 overflow-hidden">
+    <section className="relative  bg-gradient-to-br from-orange-50 via-white to-gray-100 text-gray-900 py-28 px-6 md:px-20 overflow-hidden">
 {/* ===== Updated Fluid Wave-Line SVG Backgrounds (shifted right) ===== */}
 <motion.svg
   xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@ export default function InvestorHero() {
 
 
       {/* ===== Main Content ===== */}
-      <div className="relative z-30 max-w-4xl mx-auto text-center md:text-left md:mt-18">
+      <div className="relative z-30 max-w-4xl mx-auto text-center md:text-left mt-20">
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

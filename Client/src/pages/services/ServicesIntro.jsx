@@ -4,14 +4,14 @@ import { Sparkles, Rocket, Lightbulb, Users } from "lucide-react";
 
 export default function ServicesIntro() {
   return (
-    <section className="relative overflow-hidden -mt-18 bg-gray-100 text-gray-900 py-24 px-6 md:px-12">
+    <section className="relative overflow-hidden  bg-gray-100 text-gray-900 py-24 px-6 md:px-12">
       {/*  Decorative Gradient Blobs */}
       <div className="absolute -top-24 -right-24 w-[28rem] h-[28rem] bg-gradient-to-br from-orange-300/20 to-amber-200/40 rounded-full blur-3xl animate-pulse-slow" />
       <div className="absolute -bottom-32 -left-32 w-[32rem] h-[32rem] bg-gradient-to-tr from-amber-300/20 to-orange-200/40 rounded-full blur-3xl animate-pulse-slow" />
 
       {/*  Intro Text */}
       <motion.div
-        className="relative z-10 max-w-4xl mx-auto text-center mt-18"
+        className="relative z-10 max-w-4xl mx-auto text-center mt-20"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}

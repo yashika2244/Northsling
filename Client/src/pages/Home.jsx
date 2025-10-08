@@ -16,7 +16,7 @@ import ClientsSection from "../components/ClientsSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pt-24">
       <Hero1/>
       <DigitalLensSection />
       <ServicesSection/>

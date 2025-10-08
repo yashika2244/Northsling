@@ -8,7 +8,7 @@ import ServicesSection from '../components/ServicesSection.jsx'
 
 function Services() {
   return (
-    <div>
+    <div className=''>
       <ServicesIntro/>
       <CoreServices/>
       <AIBusinessHero/>
