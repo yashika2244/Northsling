@@ -38,6 +38,13 @@ const stories = [
     title: "Ageas Insurance – Agile Remote Teams for Core Insurance",
     desc: "Developed flexible, high-performance teams driving insurance platform scalability and innovation.",
   },
+  // ===== New Card Added =====
+  {
+    image:
+      "https://images.unsplash.com/photo-1623055841045-8d105d8d8f06?auto=format&fit=crop&w=800&q=80",
+    title: "Northsling – Digital Transformation for Retail",
+    desc: "Implemented a cloud-based inventory and analytics system that boosted operational efficiency and customer engagement.",
+  },
 ];
 
 export default function SuccessStoriesCards() {
@@ -61,7 +68,6 @@ export default function SuccessStoriesCards() {
                 placeholder="Search success stories..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-
                 className="w-full rounded-full border border-orange-200 py-2.5 pl-10 pr-4 text-sm focus:ring-1 focus:ring-orange-400 text-black outline-none"
               />
               <Search

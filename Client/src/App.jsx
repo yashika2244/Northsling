@@ -9,10 +9,12 @@ import CompanyInsights from "./pages/Investers";
 import Resources from "./pages/Resources";
 import Success from "./pages/success/Success";
 import NotFound from "./pages/NotFound";
+// import ScrollToTop from "./components/ScrollToTop";
 
 function AppWrapper() {
   return (
     <>
+    {/* <ScrollToTop /> */}
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

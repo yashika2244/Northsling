@@ -4,10 +4,12 @@ import EpamAtGlance from "./company/EpamAtGlance";
 import HeroSection from "./company/HeroSection";
 import Locations from "../components/Locations";
 import LeadershipTeam from "./company/LeadershipTeam";
+import TeamSection from "./company/TeamSection";
 
 function Company() {
   return (
     <div>
+      <TeamSection/>
       <CompanySection />
       <HeroSection />
       <LeadershipTeam/>

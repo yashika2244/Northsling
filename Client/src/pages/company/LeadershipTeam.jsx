@@ -29,7 +29,7 @@ const team = [
 
 export default function LeadershipTeam() {
   return (
-    <section className="relative bg-gray-50 py-28 px-6 md:px-20 overflow-hidden">
+    <section className="relative bg-gray-50 md:py-28 py-12  px-6 md:px-20 overflow-hidden">
       {/* Background Accent Circles */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-gradient-to-tr from-orange-100 to-pink-100 rounded-full opacity-30 -z-10 animate-pulse-slow"></div>
       <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-gradient-to-bl from-indigo-100 to-purple-100 rounded-full opacity-25 -z-10 animate-pulse-slow"></div>
