@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
-  background: black; /* solid dark bg */
+  background: #f3f4f6; /* solid dark bg */
   color: #fff;
   position: relative;
 }

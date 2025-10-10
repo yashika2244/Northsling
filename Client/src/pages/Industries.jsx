@@ -4,15 +4,17 @@ import IndustriesHero from './industries/IndustriesHero'
 import IndustryCards from './industries/IndustryCards'
 import IndustryStats from './industries/IndustryStats'
 import IndustryCTA from './industries/IndustryCTA'
+import IndustriesPanel from './industries/IndustrienPanel'
 
 function Industries() {
   return (
     <div>
-      <IndustriesHero/>
+      {/* <IndustriesHero/>
       <IndustriesSection/>
        <IndustryCards />
       <IndustryStats />
-      <IndustryCTA />
+      <IndustryCTA /> */}
+      <IndustriesPanel/>
     </div>
   )
 }

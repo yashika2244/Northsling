@@ -6,18 +6,20 @@ import GovernanceSection from './investers/GovernanceSection'
 import ReportsAndFilings from './investers/ReportsAndFilings'
 import InvestorContact from './investers/InvestorContact'
 import ContactForm from './success/ContactForm'
+import InvestersPanel from './investers/InvestersPanel'
 
 function Investers() {
   return (
     <div>
-       <InvestorHero />
+       {/* <InvestorHero />
       <InvestorOverview />
       <FinancialHighlights />
       <GovernanceSection />
       <ReportsAndFilings />
       {/* <InvestorContact />
        */}
-    <ContactForm/>
+    {/* <ContactForm/> */} 
+    <InvestersPanel/>
     </div>
   )
 }

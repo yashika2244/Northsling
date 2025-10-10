@@ -5,16 +5,18 @@ import HeroSection from "./company/HeroSection";
 import Locations from "../components/Locations";
 import LeadershipTeam from "./company/LeadershipTeam";
 import TeamSection from "./company/TeamSection";
+import CompanyPanel from "./company/CompanyPanel";
 
 function Company() {
   return (
     <div>
-      <TeamSection/>
+      {/* <TeamSection/>
       <CompanySection />
       <HeroSection />
       <LeadershipTeam/>
       <EpamAtGlance />
-      <Locations/>
+      <Locations/> */}
+      <CompanyPanel/>
     </div>
   );
 }

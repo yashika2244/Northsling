@@ -4,15 +4,17 @@ import CreateCareerSection from './career/CreateCareerSection'
 import WhoWeAre from './career/WhoWeAre'
 import CareerStory from './career/CareerStory'
 import OurPeople from './career/OurPeople'
+import ResourcesPanel from './career/ResoucesPanel'
 
 function Resources() {
   return (
     <div>
-      <CareerSection/>
+      {/* <CareerSection/>
       <WhoWeAre/>
       <CreateCareerSection/>
       <OurPeople/>
-      <CareerStory/>
+      <CareerStory/> */}
+      <ResourcesPanel/>
     </div>
   )
 }

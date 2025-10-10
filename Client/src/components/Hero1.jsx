@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Hero1({ showSVG = true }) {
   return (
-   <section className="relative w-full h-auto md:min-h-screen bg-black flex flex-col justify-start md:justify-center px-6 md:px-12 pt-24 md:pt-32 pb-16 overflow-hidden">
+   <section className="relative w-full  h-auto md:min-h-screen bg-black flex flex-col justify-start md:justify-center px-6 md:px-12 pt-24 md:pt-48 pb-16 overflow-hidden">
 
       {showSVG && (
         <motion.svg

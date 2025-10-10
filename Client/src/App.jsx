@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./Header/Navbar";
 import Home from "./pages/Home";
 import Footer from "./Footer/Footer";
@@ -9,9 +9,11 @@ import CompanyInsights from "./pages/Investers";
 import Resources from "./pages/Resources";
 import Success from "./pages/success/Success";
 import NotFound from "./pages/NotFound";
-import ScrollToTop from "./components/ScrollToTop"; // make sure to import
+import ScrollToTop from "./components/ScrollToTop";
 
 function AppWrapper() {
+  const location = useLocation(); // gives current route path
+
   return (
     <>
       <Navbar />
@@ -25,7 +27,9 @@ function AppWrapper() {
         <Route path="/career" element={<Resources />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <Footer />
+
+      {/* ✅ Show Footer only on home page */}
+      {location.pathname === "/" && <Footer />}
     </>
   );
 }
@@ -33,7 +37,7 @@ function AppWrapper() {
 function App() {
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <AppWrapper />
     </Router>
   );
