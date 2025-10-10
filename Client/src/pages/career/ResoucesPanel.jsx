@@ -33,7 +33,7 @@ export default function ResourcesPanel() {
   };
 
   return (
-    <div className="relative hide-scrollbar bg-gradient-to-br from-white via-orange-50 to-white text-gray-800 rounded-3xl shadow-xl border border-orange-100 flex flex-col sm:flex-row overflow-hidden max-w-8xl md:mx-6 mt-20 mb-16">
+    <div className="relative hide-scrollbar bg-gradient-to-br from-white via-orange-50 to-white text-gray-800 rounded-3xl shadow-xl border border-orange-100 flex flex-col sm:flex-row overflow-hidden max-w-8xl md:mx-6  mb-16">
       {/* Mobile Categories */}
       <div className="sm:hidden overflow-x-auto py-4 px-2 flex gap-2">
         {categories.map((cat) => (

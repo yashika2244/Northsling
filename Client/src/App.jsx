@@ -24,7 +24,7 @@ function AppWrapper() {
         <Route path="/company" element={<CompanyAbout />} />
         <Route path="/investors" element={<CompanyInsights />} />
         <Route path="/success-stories" element={<Success />} />
-        <Route path="/career" element={<Resources />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

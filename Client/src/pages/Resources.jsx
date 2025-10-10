@@ -8,7 +8,8 @@ import ResourcesPanel from './career/ResoucesPanel'
 
 function Resources() {
   return (
-    <div>
+            <div className="pt-21 bg-white min-h-screen">
+
       {/* <CareerSection/>
       <WhoWeAre/>
       <CreateCareerSection/>

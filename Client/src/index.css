@@ -70,28 +70,21 @@ body {
   to   { transform: translateX(100%); }
 }
 
-/* 🌟 Custom Scrollbar — Visible on Desktop Only */
-@media (min-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #f97316, #fb923c);
-    border-radius: 10px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #ea580c, #f97316);
-  }
+/*  Custom Scrollbar — Visible on Desktop Only */
+/* Hide scrollbar everywhere but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+  overflow-y: auto;          /* scroll works */
 }
 
-/* 🧡 Completely Hidden Scrollbar on Mobile */
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;   /* Chrome, Safari, Opera */
+}
+
+/* Completely Hidden Scrollbar on Mobile */
 @media (max-width: 767px) {
   /* Hide scrollbar visually */
   ::-webkit-scrollbar {

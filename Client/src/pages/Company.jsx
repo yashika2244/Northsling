@@ -9,7 +9,7 @@ import CompanyPanel from "./company/CompanyPanel";
 
 function Company() {
   return (
-    <div>
+       <div className="pt-21 bg-white min-h-screen">
       {/* <TeamSection/>
       <CompanySection />
       <HeroSection />

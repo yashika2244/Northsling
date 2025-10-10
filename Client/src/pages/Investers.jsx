@@ -10,7 +10,8 @@ import InvestersPanel from './investers/InvestersPanel'
 
 function Investers() {
   return (
-    <div>
+          <div className="pt-21 bg-white min-h-screen">
+
        {/* <InvestorHero />
       <InvestorOverview />
       <FinancialHighlights />

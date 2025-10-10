@@ -75,7 +75,7 @@ export default function IndustriesPanel() {
   const [active, setActive] = useState("Banking &  Finance");
 
   return (
-    <div className="relative hide-scrollbar bg-gradient-to-br from-white via-orange-50 to-white text-gray-800 rounded-3xl shadow-xl border border-orange-100 flex flex-col sm:flex-row overflow-hidden max-w-8xl md:mx-6 mt-20 mb-16">
+    <div className="relative hide-scrollbar bg-gradient-to-br from-white via-orange-50 to-white text-gray-800 rounded-3xl shadow-xl border border-orange-100 flex flex-col sm:flex-row overflow-hidden max-w-8xl md:mx-6 mb-16">
       {/* Mobile Categories - Horizontal Scroll */}
       <div className="sm:hidden overflow-x-auto  py-4 px-2 flex gap-2">
         {categories.map((cat) => (
@@ -94,7 +94,7 @@ export default function IndustriesPanel() {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="hidden hide-scrollbar  sm:w-1/3 sm:flex bg-white/60 backdrop-blur-xl border-b sm:border-b-0 border-orange-100 p-5 sm:p-6 flex-col rounded-l-3xl relative overflow-hidden">
+      <div className="hidden hide-scrollbar  sm:w-1/3 sm:flex bg-white/60 backdrop-blur-xl border-b sm:border-b-0 border-orange-100 p-5 sm:p-4 flex-col rounded-l-3xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-40 h-40 blur-3xl rounded-full -translate-x-1/3 -translate-y-1/3 pointer-events-none" />
 
         <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-orange-600 to-pink-500 bg-clip-text text-transparent tracking-tight">
@@ -140,27 +140,29 @@ export default function IndustriesPanel() {
               Explore All
             </motion.button>
           </div>
+<div className="space-y-3 max-h-96 hide-scrollbar pr-2">
+  {data[active]?.industries.map((industry, i) => (
+    <motion.div
+      key={industry}
+      initial={{ opacity: 0, x: -15 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: i * 0.08 }}
+      whileHover={{ x: 8 }}
+      className="flex items-center justify-between border border-transparent hover:border-orange-100 bg-white/60 hover:bg-white/90 rounded-xl px-4 py-3 shadow-sm hover:shadow-md cursor-pointer group transition-all duration-300"
+    >
+      <span className="group-hover:text-orange-600 text-gray-800 font-medium transition-colors">
+        {industry}
+      </span>
+      <ArrowUpRight
+        size={18}
+        className="opacity-0 group-hover:opacity-100 text-orange-500 transition-all transform group-hover:translate-x-1"
+      />
+    </motion.div>
+  ))}
+</div>
 
-          <div className="space-y-3">
-            {data[active]?.industries.map((industry, i) => (
-              <motion.div
-                key={industry}
-                initial={{ opacity: 0, x: -15 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-                whileHover={{ x: 8 }}
-                className="flex items-center justify-between border border-transparent hover:border-orange-100 bg-white/60 hover:bg-white/90 rounded-xl px-4 py-3 shadow-sm hover:shadow-md cursor-pointer group transition-all duration-300"
-              >
-                <span className="group-hover:text-orange-600 text-gray-800 font-medium transition-colors">
-                  {industry}
-                </span>
-                <ArrowUpRight
-                  size={18}
-                  className="opacity-0 group-hover:opacity-100 text-orange-500 transition-all transform group-hover:translate-x-1"
-                />
-              </motion.div>
-            ))}
-          </div>
+
+
         </div>
 
         {/* Image + Text */}
