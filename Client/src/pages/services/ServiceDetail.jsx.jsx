@@ -1,9 +1,11 @@
+
 // import { useParams } from "react-router-dom";
 // import { data } from "./ProductsUI";
 // import React, { Suspense } from "react";
 
 // // Normalize function
-// const normalize = (str) => str.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-");
+// const normalize = (str) =>
+//   str.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-");
 
 // export default function ServiceDetail() {
 //   const { serviceId } = useParams();
@@ -16,12 +18,21 @@
 //   if (!categoryKey)
 //     return <div className="p-6 text-center">Page for "{serviceId}" coming soon!</div>;
 
-//   // Special lazy-loaded component for UI/UX Design
+//   // Lazy-load components based on service
 //   if (serviceId === "ui-ux-design") {
 //     const ParentUi = React.lazy(() => import("../../components/Ui.jsx/ParentUi"));
 //     return (
 //       <Suspense fallback={<div className="p-6">Loading UI/UX Design...</div>}>
 //         <ParentUi />
+//       </Suspense>
+//     );
+//   }
+
+//   if (serviceId === "website-redesign") {
+//     const ParentWebsite = React.lazy(() => import("../../components/WebsiteRedesign/ParentWebiste"));
+//     return (
+//       <Suspense fallback={<div className="p-6">Loading Website Development...</div>}>
+//         <ParentWebsite />
 //       </Suspense>
 //     );
 //   }
@@ -34,8 +45,6 @@
 //     </div>
 //   );
 // }
-
-
 import { useParams } from "react-router-dom";
 import { data } from "./ProductsUI";
 import React, { Suspense } from "react";
@@ -53,11 +62,17 @@ export default function ServiceDetail() {
   );
 
   if (!categoryKey)
-    return <div className="p-6 text-center">Page for "{serviceId}" coming soon!</div>;
+    return (
+      <div className="p-6 text-center">
+        Page for "{serviceId}" coming soon!
+      </div>
+    );
 
   // Lazy-load components based on service
   if (serviceId === "ui-ux-design") {
-    const ParentUi = React.lazy(() => import("../../components/Ui.jsx/ParentUi"));
+    const ParentUi = React.lazy(() =>
+      import("../../components/Ui.jsx/ParentUi")
+    );
     return (
       <Suspense fallback={<div className="p-6">Loading UI/UX Design...</div>}>
         <ParentUi />
@@ -66,10 +81,24 @@ export default function ServiceDetail() {
   }
 
   if (serviceId === "website-redesign") {
-    const ParentWebsite = React.lazy(() => import("../../components/WebsiteRedesign/ParentWebiste"));
+    const ParentWebsite = React.lazy(() =>
+      import("../../components/WebsiteRedesign/ParentWebiste")
+    );
     return (
       <Suspense fallback={<div className="p-6">Loading Website Development...</div>}>
         <ParentWebsite />
+      </Suspense>
+    );
+  }
+
+  // NEW: For CMS service
+  if (serviceId === "cms-solutions") {
+    const ParentCms = React.lazy(() =>
+      import("../../components/cms/ParentCms")
+    );
+    return (
+      <Suspense fallback={<div className="p-6">Loading CMS Development...</div>}>
+        <ParentCms />
       </Suspense>
     );
   }
@@ -78,7 +107,9 @@ export default function ServiceDetail() {
   return (
     <div className="p-6 text-center">
       <h1 className="text-3xl font-bold mb-4">{categoryKey}</h1>
-      <p className="text-lg">"{serviceId.replace(/-/g, " ")}" page coming soon!</p>
+      <p className="text-lg">
+        "{serviceId.replace(/-/g, " ")}" page coming soon!
+      </p>
     </div>
   );
 }
