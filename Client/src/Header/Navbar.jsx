@@ -12,28 +12,40 @@ import CompanyPanel from "../pages/company/CompanyPanel";
 import InvestorsPanel from "../pages/investers/InvestersPanel";
 import ResourcesPanel from "../pages/career/ResoucesPanel";
 import Success from "../pages/success/Success";
+
+
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
-
+  const isServiceDetail =
+    location.pathname.startsWith("/services/") &&
+    location.pathname !== "/services";
   const [mobileOpen, setMobileOpen] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [closing, setClosing] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-let hoverTimeout;
+  let hoverTimeout;
   useEffect(() => {
-    if (location.pathname === "/" || location.pathname === "/success-stories") {
+    // Reset clicked index on pages where hover panel should not stay
+    if (
+      location.pathname === "/" ||
+      location.pathname === "/success-stories" ||
+      isServiceDetail
+    ) {
       setClickedIndex(null);
     }
 
     const handleScroll = () => {
+      // Transparent until scroll > 50 on home, success, or service detail pages
       if (
         location.pathname === "/" ||
-        location.pathname === "/success-stories"
+        location.pathname === "/success-stories" ||
+        isServiceDetail
       ) {
         setScrolled(window.scrollY > 50);
       } else {
+        // Solid background on other pages
         setScrolled(true);
       }
     };
@@ -100,20 +112,19 @@ let hoverTimeout;
           }`}
         >
           {navLinks.map((link, idx) => {
-            const isActive =
-              clickedIndex === idx && location.pathname === link.path;
+   const isActive = location.pathname.startsWith(link.path);
             const isHovered = hoveredIndex === idx;
 
             return (
               <div
                 key={idx}
-              onMouseEnter={() => {
-  clearTimeout(hoverTimeout);
-  setHoveredIndex(idx);
-}}
-onMouseLeave={() => {
-  hoverTimeout = setTimeout(() => setHoveredIndex(null), 200);
-}}
+                onMouseEnter={() => {
+                  clearTimeout(hoverTimeout);
+                  setHoveredIndex(idx);
+                }}
+                onMouseLeave={() => {
+                  hoverTimeout = setTimeout(() => setHoveredIndex(null), 200);
+                }}
                 onClick={() => handleClick(idx, link.path)}
                 className={`flex items-center px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 cursor-pointer
   ${
@@ -161,19 +172,21 @@ onMouseLeave={() => {
       </div>
 
       {/* Hover Panel (Preview without route change) */}
-    {/* Hover Panel (Preview without route change) */}
-{hoveredIndex !== null && navLinks[hoveredIndex].content && (
-  <div
-    className={`absolute top-full -left-4 w-[calc(100%+2rem)] z-40 mt-2 transition-all duration-300
-      ${hoveredIndex !== null ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"}
+      {hoveredIndex !== null && navLinks[hoveredIndex].content && (
+        <div
+          className={`absolute top-full -left-4 w-[calc(100%+2rem)] z-40 mt-2 transition-all duration-300
+      ${
+        hoveredIndex !== null
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 -translate-y-2"
+      }
     `}
-    onMouseEnter={() => setHoveredIndex(hoveredIndex)}
-    onMouseLeave={() => setHoveredIndex(null)}
-  >
-    {navLinks[hoveredIndex].content}
-  </div>
-)}
-
+          onMouseEnter={() => setHoveredIndex(hoveredIndex)}
+          onMouseLeave={() => setHoveredIndex(null)}
+        >
+          {navLinks[hoveredIndex].content}
+        </div>
+      )}
 
       {/* Mobile Menu */}
       {mobileOpen && (
@@ -206,8 +219,7 @@ onMouseLeave={() => {
 
             <nav className="flex flex-col p-6 space-y-3">
               {navLinks.map((link, idx) => {
-                const isActive =
-                  idx === clickedIndex || location.pathname === link.path;
+  const isActive = idx === clickedIndex || location.pathname.startsWith(link.path);
                 return (
                   <Link
                     key={idx}

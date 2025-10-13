@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function IndustriesPanel() {
   const categories = [
@@ -140,29 +141,39 @@ export default function IndustriesPanel() {
               Explore All
             </motion.button>
           </div>
-<div className="space-y-3 max-h-96 hide-scrollbar pr-2">
-  {data[active]?.industries.map((industry, i) => (
-    <motion.div
-      key={industry}
-      initial={{ opacity: 0, x: -15 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: i * 0.08 }}
-      whileHover={{ x: 8 }}
-      className="flex items-center justify-between border border-transparent hover:border-orange-100 bg-white/60 hover:bg-white/90 rounded-xl px-4 py-3 shadow-sm hover:shadow-md cursor-pointer group transition-all duration-300"
-    >
-      <span className="group-hover:text-orange-600 text-gray-800 font-medium transition-colors">
-        {industry}
-      </span>
-      <ArrowUpRight
-        size={18}
-        className="opacity-0 group-hover:opacity-100 text-orange-500 transition-all transform group-hover:translate-x-1"
-      />
-    </motion.div>
-  ))}
+          <div className="space-y-3 max-h-96 hide-scrollbar pr-2">
+         <div className="space-y-3 max-h-96 hide-scrollbar pr-2">
+  {data[active]?.industries.map((industry, i) => {
+    const route = `/industries/${industry
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]/g, "")}`; // Clean special chars
+    return (
+      <motion.div
+        key={industry}
+        initial={{ opacity: 0, x: -15 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: i * 0.08 }}
+        whileHover={{ x: 8 }}
+      >
+        <Link
+          to={route}
+          className="flex items-center justify-between border border-transparent hover:border-orange-100 bg-white/60 hover:bg-white/90 rounded-xl px-4 py-3 shadow-sm hover:shadow-md group transition-all duration-300"
+        >
+          <span className="group-hover:text-orange-600 text-gray-800 font-medium transition-colors">
+            {industry}
+          </span>
+          <ArrowUpRight
+            size={18}
+            className="opacity-0 group-hover:opacity-100 text-orange-500 transition-all transform group-hover:translate-x-1"
+          />
+        </Link>
+      </motion.div>
+    );
+  })}
 </div>
 
-
-
+          </div>
         </div>
 
         {/* Image + Text */}

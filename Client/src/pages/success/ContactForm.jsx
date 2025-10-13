@@ -25,7 +25,7 @@ export default function ContactForm() {
    <div
   className="min-h-screen flex items-center justify-end px-4 py-12"
   style={{
-    backgroundImage: `url('form.jpg')`,
+    backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}

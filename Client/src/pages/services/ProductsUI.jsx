@@ -1,8 +1,96 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
+export const data = {
+  "Customer Experience": {
+    services: [
+      "UI/UX Design",
+      "Website Redesign",
+      "CMS Solutions",
+      "Customer Portal Development",
+      "CRM Integration",
+    ],
+    image:
+      "https://tse3.mm.bing.net/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3",
+    text: "Better Experiences, Happier Customers",
+  },
+  "Digital Engineering": {
+    services: [
+      "Custom App Development",
+      "Legacy Modernization",
+      "Business Process Management",
+      "Product Engineering",
+      "Quality Assurance (QA) & Quality Control (QC)",
+      "Maintenance and Support",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?q=80&w=1600",
+    text: "Build smarter, faster, and scalable digital ecosystems.",
+  },
+  "AI and Analytics": {
+    services: [
+      "Data Lake & Business Intelligence",
+      "Gen AI and Agentic AI",
+      "AI Chatbots",
+      "AI Models",
+      "Advanced Analytics",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
+    text: "Unlock business insights using AI and data intelligence.",
+  },
+  "Cloud Services & DevOps": {
+    services: [
+      "Intelligent Infrastructure Management (iiM)",
+      "Performance Optimization",
+      "DevOps Excellence",
+      "Cloud Consulting & Migration",
+      "Cloud Email Solution",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
+    text: "Unlock business insights using AI and data intelligence.",
+  },
+  Cybersecurity: {
+    services: [
+      "Cybersecurity Audits & Risk Assessments",
+      "Vulnerability Assessment & Penetration Testing (VAPT)",
+      "Governance, Risk, and Compliance (GRC)",
+      "Cyber Insurance & Incident Response",
+      "Email Threat Protection & Compliance",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
+    text: "Unlock business insights using AI and data intelligence.",
+  },
+  "Integrated Digital Marketing": {
+    services: [
+      "Unified KPI Visibility",
+      "Digital Asset Optimization",
+      "Full-Funnel Growth",
+      "Media and Communication Excellence",
+    ],
+    image:
+      "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
+    text: "Unlock business insights using AI and data intelligence.",
+  },
+  "Managed Services": {
+    services: ["Flexi", "Dedicated", "Managed Dedicated", "Fix-Bid"],
+    image:
+      "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
+    text: "Unlock business insights using AI and data intelligence.",
+  },
+  Products: {
+    services: ["Breeze", "Mobilearn", "Origin Insurance", "Video Banking"],
+    image:
+      "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
+    text: "Unlock business insights using AI and data intelligence.",
+  },
+};
 
 export default function ServicesPanel() {
+  
   const categories = [
     "Customer Experience",
     "Digital Engineering",
@@ -14,108 +102,11 @@ export default function ServicesPanel() {
     "Products",
   ];
 
-  const data = {
-    "Customer Experience": {
-      services: [
-        "UI/UX Design",
-        "Website Redesign",
-        "CMS Solutions",
-        "Customer Portal Development",
-        "CRM Integration",
-      ],
-      image:
-        "https://tse3.mm.bing.net/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?rs=1&pid=ImgDetMain&o=7&rm=3",
-      text: "Better Experiences, Happier Customers",
-    },
-    "Digital Engineering": {
-      services: [
-        "Custom App Development",
-        "Legacy Modernization",
-        "Business Process Management",
-        "Product Engineering",
-        "Quality Assurance (QA) & Quality Control (QC)",
-        "Maintenance and Support"
-      ],
-      image:
-        "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?q=80&w=1600",
-      text: "Build smarter, faster, and scalable digital ecosystems.",
-    },
-    "AI and Analytics": {
-      services: [
-        "Data Lake & Business Intelligence",
-        "Gen AI and Agentic AI",
-        "AI Chatbots",
-        "AI Models",
-        "Advanced Analytics"
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
-      text: "Unlock business insights using AI and data intelligence.",
-    },
-    "Cloud Services & DevOps": {
-      services: [
-        "Intelligent Infrastructure Management (iiM)",
-        "Performance Optimization",
-        "DevOps Excellence",
-        "Cloud Consulting & Migration",
-        "Cloud Email Solution"
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
-      text: "Unlock business insights using AI and data intelligence.",
-    },
-    "Cybersecurity": {
-      services: [
-        "Cybersecurity Audits & Risk Assessments",
-        "Vulnerability Assessment & Penetration Testing (VAPT)",
-        "Governance, Risk, and Compliance (GRC)",
-        "Cyber Insurance & Incident Response",
-        "Email Threat Protection & Compliance"
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
-      text: "Unlock business insights using AI and data intelligence.",
-    },
-    "Integrated Digital Marketing": {
-      services: [
-        "Unified KPI Visibility",
-        "Digital Asset Optimization",
-        "Full-Funnel Growth",
-        "Media and Communication Excellence",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
-      text: "Unlock business insights using AI and data intelligence.",
-    },
-    "Managed Services": {
-      services: [
-        "Flexi",
-        "Dedicated",
-        "Managed Dedicated",
-        "Fix-Bid",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
-      text: "Unlock business insights using AI and data intelligence.",
-    },
-    "Products": {
-      services: [
-        "Breeze",
-        "Mobilearn",
-        "Origin Insurance",
-        "Video Banking",
-      ],
-      image:
-        "https://images.unsplash.com/photo-1581091870622-7e0cdfbb6798?q=80&w=1600",
-      text: "Unlock business insights using AI and data intelligence.",
-    },
-  };
-
   const [active, setActive] = useState("Customer Experience");
-
+  const normalize = (str) =>
+    str.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-");
   return (
     <div className="relative hide-scrollbar bg-gradient-to-br from-white via-orange-50 to-white text-gray-800 rounded-3xl shadow-xl border border-orange-100 flex flex-col sm:flex-row overflow-hidden max-w-8xl md:mx-6 mb-16">
-
       {/* Mobile Categories - Horizontal Scroll */}
       <div className="sm:hidden overflow-x-auto  py-4 px-2 flex gap-2">
         {categories.map((cat) => (
@@ -181,26 +172,34 @@ export default function ServicesPanel() {
             </motion.button>
           </div>
 
-          <div className="space-y-3">
-            {data[active]?.services.map((service, i) => (
-              <motion.div
-                key={service}
-                initial={{ opacity: 0, x: -15 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-                whileHover={{ x: 8 }}
-                className="flex items-center justify-between border border-transparent hover:border-orange-100 bg-white/60 hover:bg-white/90 rounded-xl px-4 py-3 shadow-sm hover:shadow-md cursor-pointer group transition-all duration-300"
-              >
-                <span className="group-hover:text-orange-600 text-gray-800 font-medium transition-colors">
-                  {service}
-                </span>
-                <ArrowUpRight
-                  size={18}
-                  className="opacity-0 group-hover:opacity-100 text-orange-500 transition-all transform group-hover:translate-x-1"
-                />
-              </motion.div>
-            ))}
-          </div>
+       <div className="space-y-3">
+  {data[active]?.services.map((service, i) => {
+    const route = `/services/${normalize(service)}`; // <- fix here
+    return (
+      <motion.div
+        key={service}
+        initial={{ opacity: 0, x: -15 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: i * 0.08 }}
+        whileHover={{ x: 8 }}
+      >
+        <Link
+          to={route}
+          className="flex items-center justify-between border border-transparent hover:border-orange-100 bg-white/60 hover:bg-white/90 rounded-xl px-4 py-3 shadow-sm hover:shadow-md group transition-all duration-300"
+        >
+          <span className="group-hover:text-orange-600 text-gray-800 font-medium transition-colors">
+            {service}
+          </span>
+          <ArrowUpRight
+            size={18}
+            className="opacity-0 group-hover:opacity-100 text-orange-500 transition-all transform group-hover:translate-x-1"
+          />
+        </Link>
+      </motion.div>
+    );
+  })}
+</div>
+
         </div>
 
         {/* Image + Text */}
