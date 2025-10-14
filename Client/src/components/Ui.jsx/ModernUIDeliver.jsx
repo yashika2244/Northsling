@@ -39,11 +39,7 @@ export default function ModernUIDeliver({
         </div>
       )}
 
-      {(title || description || features.length > 0) && (
-        <div className="text-center mt-16 text-gray-400 text-sm font-medium">
-          Great UX isn’t art — it’s engineered empathy.
-        </div>
-      )}
+    
     </section>
   );
 }

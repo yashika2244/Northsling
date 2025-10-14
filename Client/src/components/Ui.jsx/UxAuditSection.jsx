@@ -5,6 +5,7 @@ export default function UxAuditSection({
   logoText = "NS",
   heading = "Claim Your Free UX Audit",
   subheading = "Your interface might be costing you more than you think.",
+  find=" What you’ll get:",
   points = [
     "Journey friction heatmap",
     "Mobile & accessibility compliance scan",
@@ -60,11 +61,18 @@ export default function UxAuditSection({
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className={`text-gray-200 mb-5 ${textColor}`}
+            className={`text-gray-200 mb-5`}
           >
             {subheading}
           </motion.p>
-
+  <motion.h1
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className={`text-black mb-5 ${textColor}`}
+          >
+            {find}
+          </motion.h1>
           {/* Points with stagger */}
           <motion.ul
             initial="hidden"

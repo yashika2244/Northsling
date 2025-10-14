@@ -23,7 +23,7 @@ export default function ContactForm() {
 
   return (
    <div
-  className="min-h-screen flex items-center justify-end px-4 py-12"
+  className="min-h-screen flex items-center justify-end px-4 py-10"
   style={{
     backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085')`,
     backgroundSize: 'cover',
@@ -38,7 +38,7 @@ export default function ContactForm() {
       Have a project, idea, or collaboration in mind? Fill out the form below and we’ll reach out quickly.
     </p>
 
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-4">
       {/* Name */}
       <div className="relative">
         <User className="absolute left-3 top-2.5 text-gray-400" size={18} />
