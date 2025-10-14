@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { CheckCircle } from "lucide-react";
 
 export default function UxAuditSection({
   logoText = "NS",
   heading = "Claim Your Free UX Audit",
   subheading = "Your interface might be costing you more than you think.",
-  find=" What you’ll get:",
+  find = "What you’ll get:",
   points = [
     "Journey friction heatmap",
     "Mobile & accessibility compliance scan",
@@ -15,7 +16,7 @@ export default function UxAuditSection({
   buttonText = "Schedule Your Free Assessment",
   buttonAction = () => {},
   bgImage = "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1400&q=80",
-  accentColor = "bg-orange-500",
+  accentColor = "bg-orange-600 ",
   textColor = "text-white",
 }) {
   return (
@@ -35,12 +36,12 @@ export default function UxAuditSection({
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative z-10 max-w-4xl mx-auto bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl p-10 md:p-16 flex flex-col md:flex-row items-start gap-8"
+        className="relative z-10 max-w-5xl mx-auto bg-white/10 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-2xl p-8 md:p-16 flex flex-col md:flex-row items-start gap-8"
       >
         {/* Logo / Icon with subtle float */}
         <motion.div
-          className={`flex-shrink-0 ${accentColor} w-20 h-20 rounded-full flex items-center justify-center font-bold text-2xl shadow-lg`}
-          animate={{ y: [0, -5, 0] }}
+          className={`flex-shrink-0 ${accentColor} w-24 h-24 rounded-full flex items-center justify-center font-bold text-3xl shadow-lg text-white`}
+          animate={{ y: [0, -6, 0] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         >
           {logoText}
@@ -61,19 +62,21 @@ export default function UxAuditSection({
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className={`text-gray-200 mb-5`}
+            className="text-gray-200 mb-5 md:text-lg"
           >
             {subheading}
           </motion.p>
-  <motion.h1
+
+          <motion.h3
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className={`text-black mb-5 ${textColor}`}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className={`text-xl font-semibold mb-4 ${textColor}`}
           >
             {find}
-          </motion.h1>
-          {/* Points with stagger */}
+          </motion.h3>
+
+          {/* Points with icons */}
           <motion.ul
             initial="hidden"
             whileInView="visible"
@@ -92,18 +95,18 @@ export default function UxAuditSection({
                 }}
                 className="flex items-center gap-3 text-gray-100"
               >
-                <span className={`w-2 h-2 rounded-full ${accentColor} inline-block mt-1`}></span>
-                {point}
+                <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+                <span>{point}</span>
               </motion.li>
             ))}
           </motion.ul>
 
-          {/* CTA Button with hover motion */}
+          {/* CTA Button with gradient */}
           <motion.button
             onClick={buttonAction}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className={`px-6 py-3 ${accentColor} rounded-lg font-semibold text-white shadow-lg`}
+            className="px-8 py-3 rounded-xl font-semibold text-white shadow-xl bg-orange-600  hover:bg-orange-600 transition-all duration-300"
           >
             {buttonText}
           </motion.button>

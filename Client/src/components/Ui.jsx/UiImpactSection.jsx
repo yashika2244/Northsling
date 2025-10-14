@@ -24,7 +24,7 @@ export default function UiImpactSection({
           viewport={{ once: true }}
         >
           {title && (
-            <h2 className={`text-3xl md:text-5xl font-extrabold leading-tight ${titleColor}`}>
+            <h2 className={`text-3xl md:text-5xl font-bold leading-tight ${titleColor}`}>
               {title}
             </h2>
           )}

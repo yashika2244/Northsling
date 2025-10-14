@@ -13,10 +13,10 @@ export default function HeroSection({
   subtitleColor = "text-gray-200",
 }) {
   return (
-    <section className="relative  min-h-screen flex flex-col justify-center items-center px-4 sm:px-6 lg:px-0 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-10 lg:px-20 overflow-hidden">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-black/70"
+        className="absolute inset-0 bg-black/60"
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundSize: "cover",
@@ -25,43 +25,46 @@ export default function HeroSection({
         }}
       />
 
+      {/* Overlay Gradient for Professional Look */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+
       {/* Content */}
       <motion.div
-        className="relative z-10 text-center max-w-3xl w-full"
-        initial={{ opacity: 0, y: 40 }}
+        className="relative z-10 max-w-4xl text-center"
+        initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
         {/* Headline */}
         <h1
-          className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-snug ${titleColor}`}
+          className={`text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-sans font-semibold mb-4 leading-snug ${titleColor}`}
         >
           {title}
         </h1>
 
         {/* Subheading */}
         <p
-          className={`text-base sm:text-lg md:text-xl mb-6 sm:mb-8 ${subtitleColor}`}
+          className={`text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 max-w-3xl mx-auto ${subtitleColor}`}
         >
           {subtitle}
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-3 sm:gap-5 mb-6 sm:mb-8 w-full">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-6 sm:mb-10">
           {primaryBtn && (
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-6 py-3 rounded-full bg-blue-600 text-white font-semibold shadow-md"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              className="w-full sm:w-auto px-8 py-3 rounded-lg bg-blue-600 text-white font-medium shadow-lg hover:bg-blue-700 transition-colors duration-300"
             >
               {primaryBtn}
             </motion.button>
           )}
           {secondaryBtn && (
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-6 py-3 rounded-full border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
+              whileHover={{ scale: 1.04 }}
+              whileTap={{ scale: 0.96 }}
+              className="w-full sm:w-auto px-8 py-3 rounded-lg border border-white text-white hover:bg-white hover:text-black transition-colors duration-300"
             >
               {secondaryBtn}
             </motion.button>
@@ -74,7 +77,7 @@ export default function HeroSection({
             {ratings.map((site, idx) => (
               <div
                 key={idx}
-                className="flex items-center gap-2 text-sm sm:text-base bg-black/30 px-3 py-2 rounded-md"
+                className="flex items-center gap-3 bg-black/30 px-4 py-2 rounded-lg shadow-sm"
               >
                 <span className="font-medium">{site.name}</span>
                 <div className="flex items-center gap-1">
@@ -85,12 +88,14 @@ export default function HeroSection({
                       className={`${
                         i < Math.floor(site.rating)
                           ? "fill-yellow-400 text-yellow-400"
-                          : "text-gray-500"
+                          : "text-gray-400"
                       }`}
                     />
                   ))}
                 </div>
-                <span className="text-gray-200">{site.rating.toFixed(1)}</span>
+                <span className="text-gray-200 font-semibold">
+                  {site.rating.toFixed(1)}
+                </span>
               </div>
             ))}
           </div>

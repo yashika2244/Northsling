@@ -76,6 +76,46 @@ export default function ServiceDetail() {
       </Suspense>
     );
   }
+  if (serviceId === "custom-app-development") {
+    const CustomAppParent = React.lazy(() =>
+      import("../../components/digital/CustomAppParent")
+    );
+    return (
+      <Suspense fallback={<div className="p-6">Loading CustomApp Development...</div>}>
+        <CustomAppParent/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "legacy-modernization") {
+    const Legnecy = React.lazy(() =>
+      import("../../components/digital/legency")
+    );
+    return (
+      <Suspense fallback={<div className="p-6">Loading legnecy Development...</div>}>
+        <Legnecy/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "business-process-management") {
+    const Bussiness = React.lazy(() =>
+      import("../../components/digital/Bussiness")
+    );
+    return (
+      <Suspense fallback={<div className="p-6">Loading Bussiness Development...</div>}>
+        <Bussiness/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "product-engineering") {
+    const Product = React.lazy(() =>
+      import("../../components/digital/Product")
+    );
+    return (
+      <Suspense fallback={<div className="p-6">Loading Product Development...</div>}>
+        <Product/>
+      </Suspense>
+    );
+  }
 
   // Placeholder for other services
   return (

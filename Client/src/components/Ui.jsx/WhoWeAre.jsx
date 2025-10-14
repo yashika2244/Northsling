@@ -35,7 +35,7 @@ export default function WhoWeAreSection({
           <p className={`text-xs font-semibold tracking-widest ${primaryColor} mb-2`}>
             {tag.toUpperCase()}
           </p>
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4 leading-snug">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
             {title}{" "}
             {highlightedText && <span className={primaryColor}>{highlightedText}</span>}
           </h2>

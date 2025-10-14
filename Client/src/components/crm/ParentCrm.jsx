@@ -198,7 +198,7 @@ const uiFeatures = [
         tag="Case Study"
         title="Retail Giant Boosts Loyalty with 25% More Repeat Purchases and 3x Engagement via Northsling . CRM."
         description="Northsling  deployed a modular, integrated CRM for a global retail enterprise to streamline B2B sales, service ticketing, and warranty claims."
-        image="https://tse3.mm.bing.net/th/id/OIP.WnBIDw6gU_3nk555duI5WAHaE8?w=1200&h=800&rs=1&pid=ImgDetMain&o=7&rm=3"
+        image="https://th.bing.com/th/id/OIP.I-ZQY7P5PGpaemTjinAgTQHaEJ?w=281&h=180&c=7&r=0&o=7&pid=1.7&rm=3"
         stats={stats}
         ctaText="Read full case study"
         ctaLink="#"
