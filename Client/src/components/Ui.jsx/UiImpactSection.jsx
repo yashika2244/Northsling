@@ -13,8 +13,8 @@ export default function UiImpactSection({
   pointColor = "text-gray-700",
 }) {
   return (
-    <section className="md:py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-6 md:px-12 lg:px-12 flex flex-col lg:flex-row gap-16 items-start">
+    <section className="md:py-12 bg-gradient-to-b from-gray-50 to-white">
+      <div className="container mx-auto px-6  flex flex-col lg:flex-row gap-16 items-start">
         {/* Left Text Content */}
         <motion.div
           className="lg:w-2/3 flex flex-col gap-6"
@@ -24,7 +24,7 @@ export default function UiImpactSection({
           viewport={{ once: true }}
         >
           {title && (
-            <h2 className={`text-3xl md:text-5xl font-bold leading-tight ${titleColor}`}>
+            <h2 className={`text-3xl md:text-4xl font-bold leading-tight ${titleColor}`}>
               {title}
             </h2>
           )}
@@ -71,11 +71,11 @@ export default function UiImpactSection({
                 key={idx}
                 className="bg-gradient-to-r from-blue-50 to-white hover:from-blue-100 hover:to-white shadow-xl rounded-2xl p-8 transition-all duration-300 hover:scale-105"
               >
-                <span className="text-5xl font-extrabold text-blue-600">{stat.value}</span>
+                <span className="text-4xl font-extrabold text-blue-600">{stat.value}</span>
                 <p className="text-gray-700 mt-3 text-lg leading-snug">
                   {stat.description}{" "}
                   {stat.source && (
-                    <span className="text-red-500 font-semibold">({stat.source})</span>
+                    <span className="text-red-500 font-semibold">({stat.source}).</span>
                   )}
                 </p>
               </div>

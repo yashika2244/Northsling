@@ -28,7 +28,7 @@ export default function ServiceDetail() {
       import("../../components/Ui.jsx/ParentUi")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading UI/UX Design..." />}>
+  <Suspense fallback={<LoadingScreen />}>
       <ParentUi />
     </Suspense>
 
@@ -40,7 +40,7 @@ export default function ServiceDetail() {
       import("../../components/WebsiteRedesign/ParentWebiste")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading website Design..." />}>
+  <Suspense fallback={<LoadingScreen  />}>
         <ParentWebsite />
       </Suspense>
     );
@@ -52,7 +52,7 @@ export default function ServiceDetail() {
       import("../../components/cms/ParentCms")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading CMS Design..." />}>
+  <Suspense fallback={<LoadingScreen />}>
         <ParentCms />
       </Suspense>
     );
@@ -62,7 +62,7 @@ export default function ServiceDetail() {
       import("../../components/cpd/ParentCpd")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading CPD Design..." />}>
+  <Suspense fallback={<LoadingScreen />}>
         <ParentCpd/>
       </Suspense>
     );
@@ -72,7 +72,7 @@ export default function ServiceDetail() {
       import("../../components/crm/ParentCrm")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading CRM Design..." />}>
+  <Suspense fallback={<LoadingScreen  />}>
         <ParentCrm/>
       </Suspense>
     );
@@ -82,7 +82,7 @@ export default function ServiceDetail() {
       import("../../components/digital/CustomAppParent")
     );
     return (
-   <Suspense fallback={<LoadingScreen message="Loading CAD Design..." />}>
+   <Suspense fallback={<LoadingScreen  />}>
         <CustomAppParent/>
       </Suspense>
     );
@@ -92,7 +92,7 @@ export default function ServiceDetail() {
       import("../../components/digital/legency")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading Legancy Design..." />}>
+  <Suspense fallback={<LoadingScreen />}>
         <Legnecy/>
       </Suspense>
     );
@@ -102,7 +102,7 @@ export default function ServiceDetail() {
       import("../../components/digital/Bussiness")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading BPD Design..." />}>
+  <Suspense fallback={<LoadingScreen  />}>
         <Bussiness/>
       </Suspense>
     );
@@ -112,8 +112,49 @@ export default function ServiceDetail() {
       import("../../components/digital/Product")
     );
     return (
-  <Suspense fallback={<LoadingScreen message="Loading PE  Design..." />}>
+  <Suspense fallback={<LoadingScreen  />}>
         <Product/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "quality-assurance-(qa)-&-quality-control-(qc)") {
+    const QAandQC = React.lazy(() =>
+      import("../../components/digital/QA&QC")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen  />}>
+        <QAandQC/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "maintenance-and-support") {
+    const MaintenaceandReport = React.lazy(() =>
+      import("../../components/digital/MaintenaceandReport")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen  />}>
+        <MaintenaceandReport/>
+      </Suspense>
+    );
+  }
+  // AI links
+  if (serviceId === "data-lake-&-business-intelligence") {
+    const Datalake = React.lazy(() =>
+      import("../../components/AI/DataLake")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Datalake/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "gen-ai-and-agentic-ai") {
+    const GenAI = React.lazy(() =>
+      import("../../components/AI/GenAI")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <GenAI/>
       </Suspense>
     );
   }

@@ -6,17 +6,17 @@ export default function NorthslingUIDesigns({
   sectionSubtitle,
   features = [],
   bgGradient = "bg-gradient-to-b from-gray-50 via-white to-gray-50",
-  titleColor = "text-gray-900",
+  titleColor = "text-gray-800",
   subtitleColor = "text-gray-500",
   iconColor = "text-orange-500",
 }) {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className={`${bgGradient} py-24 px-6`}>
+    <section className={`${bgGradient} py-16 px-6`}>
       {/* Section Title */}
       <div className="max-w-6xl mx-auto text-center mb-16">
-        <h2 className={`text-4xl md:text-5xl font-extrabold ${titleColor}`}>
+        <h2 className={`text-4xl md:text-4xl font-extrabold ${titleColor}`}>
           {sectionTitle}
         </h2>
         {sectionSubtitle && (

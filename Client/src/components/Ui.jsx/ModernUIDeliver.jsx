@@ -17,7 +17,7 @@ export default function ModernUIDeliver({
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto text-center mb-16">
-        {title && <h2 className="text-4xl md:text-5xl font-extrabold mb-4 text-white">{title}</h2>}
+        {title && <h2 className="text-4xl md:text-4xl font-extrabold mb-4 text-white">{title}</h2>}
         {description && <p className="text-gray-300 text-lg max-w-2xl mx-auto">{description}</p>}
       </div>
 

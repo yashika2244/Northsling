@@ -16,17 +16,17 @@ export default function HeroSection({
     <section className="relative min-h-screen flex items-center justify-center px-6 sm:px-10 lg:px-20 overflow-hidden">
       {/* Background */}
       <div
-        className="absolute inset-0 bg-black/60"
+        className="absolute inset-0  "
         style={{
           backgroundImage: `url('${bgImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          filter: "brightness(0.6)",
+          filter: "brightness(0.7)",
         }}
       />
 
       {/* Overlay Gradient for Professional Look */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent" />
+      <div className="absolute inset-0 " />
 
       {/* Content */}
       <motion.div
