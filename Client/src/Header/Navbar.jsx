@@ -13,7 +13,6 @@ import InvestorsPanel from "../pages/investers/InvestersPanel";
 import ResourcesPanel from "../pages/career/ResoucesPanel";
 import Success from "../pages/success/Success";
 
-
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -112,7 +111,7 @@ export default function Navbar() {
           }`}
         >
           {navLinks.map((link, idx) => {
-   const isActive = location.pathname.startsWith(link.path);
+            const isActive = location.pathname.startsWith(link.path);
             const isHovered = hoveredIndex === idx;
 
             return (
@@ -219,7 +218,9 @@ export default function Navbar() {
 
             <nav className="flex flex-col p-6 space-y-3">
               {navLinks.map((link, idx) => {
-  const isActive = idx === clickedIndex || location.pathname.startsWith(link.path);
+                const isActive =
+                  idx === clickedIndex ||
+                  location.pathname.startsWith(link.path);
                 return (
                   <Link
                     key={idx}
@@ -259,3 +260,7 @@ export default function Navbar() {
     </header>
   );
 }
+
+
+
+

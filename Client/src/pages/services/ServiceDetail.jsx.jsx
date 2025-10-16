@@ -2,7 +2,7 @@
 import { useParams } from "react-router-dom";
 import { data } from "./ProductsUI";
 import React, { Suspense } from "react";
-
+import LoadingScreen from "../../components/LoadingScreen";
 // Normalize function
 const normalize = (str) =>
   str.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-");
@@ -28,9 +28,10 @@ export default function ServiceDetail() {
       import("../../components/Ui.jsx/ParentUi")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading UI/UX Design...</div>}>
-        <ParentUi />
-      </Suspense>
+  <Suspense fallback={<LoadingScreen message="Loading UI/UX Design..." />}>
+      <ParentUi />
+    </Suspense>
+
     );
   }
 
@@ -39,7 +40,7 @@ export default function ServiceDetail() {
       import("../../components/WebsiteRedesign/ParentWebiste")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading Website Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading website Design..." />}>
         <ParentWebsite />
       </Suspense>
     );
@@ -51,7 +52,7 @@ export default function ServiceDetail() {
       import("../../components/cms/ParentCms")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading CMS Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading CMS Design..." />}>
         <ParentCms />
       </Suspense>
     );
@@ -61,7 +62,7 @@ export default function ServiceDetail() {
       import("../../components/cpd/ParentCpd")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading CMS Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading CPD Design..." />}>
         <ParentCpd/>
       </Suspense>
     );
@@ -71,7 +72,7 @@ export default function ServiceDetail() {
       import("../../components/crm/ParentCrm")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading CMS Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading CRM Design..." />}>
         <ParentCrm/>
       </Suspense>
     );
@@ -81,7 +82,7 @@ export default function ServiceDetail() {
       import("../../components/digital/CustomAppParent")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading CustomApp Development...</div>}>
+   <Suspense fallback={<LoadingScreen message="Loading CAD Design..." />}>
         <CustomAppParent/>
       </Suspense>
     );
@@ -91,7 +92,7 @@ export default function ServiceDetail() {
       import("../../components/digital/legency")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading legnecy Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading Legancy Design..." />}>
         <Legnecy/>
       </Suspense>
     );
@@ -101,7 +102,7 @@ export default function ServiceDetail() {
       import("../../components/digital/Bussiness")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading Bussiness Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading BPD Design..." />}>
         <Bussiness/>
       </Suspense>
     );
@@ -111,7 +112,7 @@ export default function ServiceDetail() {
       import("../../components/digital/Product")
     );
     return (
-      <Suspense fallback={<div className="p-6">Loading Product Development...</div>}>
+  <Suspense fallback={<LoadingScreen message="Loading PE  Design..." />}>
         <Product/>
       </Suspense>
     );
@@ -119,7 +120,7 @@ export default function ServiceDetail() {
 
   // Placeholder for other services
   return (
-    <div className="p-6 text-center">
+    <div className="p-6 text-center h-screen bg-black text-white flex justify-center items-center flex-col" >
       <h1 className="text-3xl font-bold mb-4">{categoryKey}</h1>
       <p className="text-lg">
         "{serviceId.replace(/-/g, " ")}" page coming soon!
