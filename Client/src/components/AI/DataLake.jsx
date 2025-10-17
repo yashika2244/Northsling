@@ -131,7 +131,7 @@ function DataLake() {
         subtitle="The faster you make decisions, the faster you grow. Northsling helps you do both."
         primaryBtn="Schedule a Meeting"
         secondaryBtn="Read Success Stories"
-        bgImage="https://th.bing.com/th/id/OIP.a4QDa-QqupTD_YNVthMklgHaDo?w=321&h=171&c=7&r=0&o=7&pid=1.7&rm=3"
+        bgImage="https://intglobal.com/wp-content/uploads/2025/05/Advanced-Analytics-scaled.jpg"
         ratings={[
           { name: "Google", rating: 4.0 },
           { name: "Clutch", rating: 4.5 },

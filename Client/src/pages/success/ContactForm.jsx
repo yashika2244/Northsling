@@ -43,7 +43,7 @@ export default function ContactForm() {
       }}
     >
       <motion.div
-        className="w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl bg-white/10 p-10 text-white"
+        className="w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl bg-white/10 p-10 text-black"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -55,7 +55,7 @@ export default function ContactForm() {
         >
           Let’s <span className="text-orange-500">connect!</span>
         </motion.h2>
-        <motion.p variants={itemVariants} className="text-gray-200 mb-6">
+        <motion.p variants={itemVariants} className="text-black mb-6">
           Have a project, idea, or collaboration in mind? Fill out the form below and we’ll reach out quickly.
         </motion.p>
 

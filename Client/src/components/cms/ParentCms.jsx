@@ -148,7 +148,7 @@ function ParentCms() {
             Content That Moves as Fast as Your Market <br />
           </>
         }
-        description="At Indus Net Technologies (Northsling), CMS means speed, control, and freedom — turning every content update into an opportunity to outpace competitors."
+        description="At  (Northsling), CMS means speed, control, and freedom — turning every content update into an opportunity to outpace competitors."
         points={[
           "   Publish in minutes, not days — no IT dependency",
           "Multi-channel content delivery from one source of truth",

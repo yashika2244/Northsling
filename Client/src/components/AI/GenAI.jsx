@@ -175,7 +175,7 @@ function GenAI() {
         title={
           <>
             What Next
-            <span className="text-yellow-400">Gen AI</span> Must Absolutely Get
+            <span className="text-yellow-400"> Gen AI</span> Must Absolutely Get
             Right
           </>
         }

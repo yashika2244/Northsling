@@ -17,7 +17,7 @@ export default function ServiceDetail() {
 
   if (!categoryKey)
     return (
-      <div className="p-6 text-center">
+      <div className="text-center h-screen bg-black text-white flex justify-center items-center flex-col" >
         Page for "{serviceId}" coming soon!
       </div>
     );
@@ -155,6 +155,76 @@ export default function ServiceDetail() {
     return (
   <Suspense fallback={<LoadingScreen />}>
         <GenAI/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "ai-chatbots") {
+    const AiChabox = React.lazy(() =>
+      import("../../components/AI/AiChatbox")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <AiChabox/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "ai-models") {
+    const AIModels = React.lazy(() =>
+      import("../../components/AI/AIModels")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <AIModels/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "advanced-analytics") {
+    const AdvancedAnalytics = React.lazy(() =>
+      import("../../components/AI/AdvancedAnalytics")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <AdvancedAnalytics/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "intelligent-infrastructure-management-(iim)") {
+    const Intelligent = React.lazy(() =>
+      import("../../components/cloud/Intelligent")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Intelligent/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "performance-optimization") {
+    const Performance = React.lazy(() =>
+      import("../../components/cloud/Performance")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Performance/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "devops-excellence") {
+    const Devops = React.lazy(() =>
+      import("../../components/cloud/Devops")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Devops/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "cloud-consulting-&-migration") {
+    const Cloud = React.lazy(() =>
+      import("../../components/cloud/Cloud")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Cloud/>
       </Suspense>
     );
   }

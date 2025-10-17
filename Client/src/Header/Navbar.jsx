@@ -85,7 +85,7 @@ export default function Navbar() {
     <header
       className={`fixed top-1 left-4 right-4 z-50 rounded-full px-4 transition-all duration-300 ${
         scrolled
-          ? "bg-white shadow-sm border-b border-orange-100"
+          ? ""
           : "bg-transparent"
       }`}
     >
@@ -107,7 +107,7 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav
           className={`hidden md:flex justify-center items-center rounded-full py-2 px-1 shadow-sm cursor-pointer transition-all duration-300 ${
-            scrolled ? "" : "bg-transparent border border-orange-500/30"
+            scrolled ? "bg-white text-black" : "bg-transparent border border-orange-500/30"
           }`}
         >
           {navLinks.map((link, idx) => {
@@ -260,7 +260,5 @@ export default function Navbar() {
     </header>
   );
 }
-
-
 
 

@@ -5,7 +5,6 @@ import { CheckCircle2 } from "lucide-react";
 export default function UxAuditSection({
   logoText = "NS",
   heading = "Claim Your Free UX Audit",
-  subheading = "Unlock hidden insights and optimize your interface for maximum engagement.",
   find = "What’s included:",
   points = [
     "Journey friction heatmap",
@@ -62,14 +61,7 @@ export default function UxAuditSection({
               {heading}
             </motion.h2>
 
-            <motion.p
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-gray-200 text-lg"
-            >
-              {subheading}
-            </motion.p>
+           
 
             <motion.h3
               initial={{ opacity: 0, x: -20 }}
