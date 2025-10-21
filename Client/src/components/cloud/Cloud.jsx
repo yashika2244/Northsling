@@ -7,126 +7,146 @@ import UxAuditSection from "../Ui.jsx/UxAuditSection";
 import ContactForm from "../../pages/success/ContactForm";
 import HeroSection from "../Ui.jsx/HeroSectionoUi";
 import WhoWeAre from "../Ui.jsx/WhoWeAre";
-import {
-  Edit3,
-  Globe,
-  Target,
-  Zap,
-  Plug,
-  Shield,
-  Layers,
-  FileCheck,
-  Code2,
-Cloud as CloudIcon,
-  ShieldCheck,
-  Brain,
-  LayoutGrid,
-  Rocket,
-} from "lucide-react";
+import { Cloud as CloudIcon, Server, Network, Database, Lock, ShieldCheck, BarChart3, Layers, Code2, Cpu, Globe, Monitor, LifeBuoy, Rocket, Zap, Target, Brain, FileCheck } from "lucide-react";
+
 
 import WhoWeAreSection from "../Ui.jsx/WhoWeAre";
+import CloudPartners from "./CloudPartners";
+import PartnersSection from "./CloudPartners";
 function Cloud() {
- const features = [
+  const cloudPartners = [
+  {
+    name: "Amazon Web Services (AWS)",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+    benefit:
+      "We engineer scalable, cost-efficient AWS cloud journeys — from initial assessment to post-migration tuning.",
+    capabilities: [
+      "Infrastructure assessment and cloud architecture planning",
+      "Application and database migration (rehost, replatform, refactor)",
+      "IAM, VPC, and backup configuration",
+      "AWS cost and usage optimization",
+    ],
+  },
+  {
+    name: "Microsoft Azure",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Microsoft_Azure_Logo.svg",
+    benefit:
+      "From hybrid to multi-cloud, we enable secure, compliant Azure transformations tailored to enterprise IT realities.",
+    capabilities: [
+      "Azure readiness and workload assessment",
+      "Lift-and-shift, replatforming, and PaaS adoption",
+      "Azure AD setup, policy enforcement, and compliance alignment",
+      "Integration with Microsoft 365, Defender, and beyond",
+    ],
+  },
+  {
+    name: "Google Cloud Platform (GCP)",
+    logo: "https://tse3.mm.bing.net/th/id/OIP.EnfZxzTZTti-wUCqCCZTvAHaHO?rs=1&pid=ImgDetMain&o=7&rm=3",
+    benefit:
+      "We simplify GCP adoption with container-first, automation-led migration approaches that drive agility and insights.",
+    capabilities: [
+      "GCP architecture consulting and phased migration planning",
+      "Compute Engine, GKE, and Cloud Storage migrations",
+      "CI/CD pipeline design and integration",
+      "IAM setup, cloud security, and budget controls",
+    ],
+  },
+];
+const features = [
+    {
+      icon: <Server className="w-7 h-7 text-yellow-400" />,
+      altIcon: <CloudIcon  className="w-7 h-7 text-yellow-400" />,
+      title: "Cloud-Native Architecture",
+      desc: "Refactor legacy apps to take full advantage of native services, containers, and serverless frameworks.",
+    },
+    {
+      icon: <Network className="w-7 h-7 text-yellow-400" />,
+      altIcon: <Globe className="w-7 h-7 text-yellow-400" />,
+      title: "Multi-Cloud Strategy",
+      desc: "Distribute workloads across AWS, Azure, and GCP for cost, compliance, and resilience benefits.",
+    },
     {
       icon: <Rocket className="w-7 h-7 text-yellow-400" />,
       altIcon: <Zap className="w-7 h-7 text-yellow-400" />,
-      title: "FinOps-Led Governance",
-      desc: "Slash wastage, align spend with ROI",
+      title: "Zero-Downtime Migration",
+      desc: "Cutover without business disruption using automation, real-time sync, and rollback capabilities.",
     },
     {
-      icon: <Zap className="w-7 h-7 text-yellow-400" />,
-      altIcon: <Rocket className="w-7 h-7 text-yellow-400" />,
-      title: "DevOps Pipeline Optimization",
-      desc: "Eliminate bottlenecks, boost release velocity",
+      icon: <Cpu className="w-7 h-7 text-yellow-400" />,
+      altIcon: <Monitor className="w-7 h-7 text-yellow-400" />,
+      title: "Auto-Scaling & Resilience",
+      desc: "Handle traffic surges without over-provisioning or compromising performance.",
+    },
+    {
+      icon: <Lock className="w-7 h-7 text-yellow-400" />,
+      altIcon: <FileCheck className="w-7 h-7 text-yellow-400" />,
+      title: "Security Built-In",
+      desc: "End-to-end encryption, IAM policies, VPC configs, and audit trails embedded into the migration lifecycle.",
     },
     {
       icon: <ShieldCheck className="w-7 h-7 text-yellow-400" />,
-      altIcon: <Shield className="w-7 h-7 text-yellow-400" />,
-      title: "Full-Stack Observability",
-      desc: "Detect and resolve issues before they escalate",
+      altIcon: <BarChart3 className="w-7 h-7 text-yellow-400" />,
+      title: "Compliance-Ready Setups",
+      desc: "Migrations aligned to ISO, GDPR, HIPAA, IRDAI, and regional mandates.",
     },
     {
-      icon: <CloudIcon  className="w-7 h-7 text-yellow-400" />,
-      altIcon: <Layers className="w-7 h-7 text-yellow-400" />,
-      title: "Auto-Scaling & Resilience",
-      desc: "Handle surges without over-provisioning",
-    },
-    {
-      icon: <Code2 className="w-7 h-7 text-yellow-400" />,
-      altIcon: <Edit3 className="w-7 h-7 text-yellow-400" />,
-      title: "SRE Integration",
-      desc: "Reliability built-in from day one",
-    },
-    {
-      icon: <Shield className="w-7 h-7 text-yellow-400" />,
-      altIcon: <ShieldCheck className="w-7 h-7 text-yellow-400" />,
-      title: "Security & Compliance Alignment",
-      desc: "Secure by design, compliant by default",
-    },
-    {
-      icon: <Layers className="w-7 h-7 text-yellow-400" />,
-      altIcon: <Cloud className="w-7 h-7 text-yellow-400" />,
-      title: "Workload Right-Sizing",
-      desc: "Continuously tune resource allocation based on real usage patterns",
-    },
-    {
-      icon: <FileCheck className="w-7 h-7 text-yellow-400" />,
-      altIcon: <Code2 className="w-7 h-7 text-yellow-400" />,
-      title: "Proactive Anomaly Detection",
-      desc: "Spot performance drifts and cost spikes before they hurt ops",
+      icon: <Database className="w-7 h-7 text-yellow-400" />,
+      altIcon: <LifeBuoy className="w-7 h-7 text-yellow-400" />,
+      title: "Post-Migration Monitoring",
+      desc: "Continuous visibility into usage, costs, and performance with real-time dashboards and alerts.",
     },
   ];
 
-
- const uiFeatures = [
+  const uiFeatures = [
     {
       icon: <Target className="w-6 h-6 text-orange-500" />,
+      altIcon: <Globe className="w-6 h-6 text-orange-500" />,
+      title: "Proven Multi-Cloud Expertise",
+      desc: "End-to-end experience in AWS, Azure, and Google Cloud deployments across industries.",
+    },
+    {
+      icon: <Brain className="w-6 h-6 text-orange-500" />,
       altIcon: <Layers className="w-6 h-6 text-orange-500" />,
-      title: "Misuse Mapping",
-      desc: "Identifies idle resources, rogue environments, and misrouted traffic inflating costs.",
+      title: "Certified Engineers, Real Outcome",
+      desc: "Solutions led by AWS, Azure, and GCP certified architects and specialists.",
     },
     {
-      icon: <Zap className="w-6 h-6 text-orange-500" />,
-      altIcon: <Rocket className="w-6 h-6 text-orange-500" />,
-      title: "Pipeline Bottleneck Scans",
-      desc: "Detects DevOps delays from flaky tests, slow approvals, and build clogs.",
+      icon: <FileCheck className="w-6 h-6 text-orange-500" />,
+      altIcon: <Code2 className="w-6 h-6 text-orange-500" />,
+      title: "Structured, Risk-Free Methodology",
+      desc: "Discovery ➝ Planning ➝ Migration ➝ Optimization — executed with zero guesswork.",
     },
     {
-      icon: <Rocket className="w-6 h-6 text-orange-500" />,
-      altIcon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: "Load Behavior Simulation",
-      desc: "Stress-tests autoscaling and circuit breakers to reveal failure points early.",
+      icon: <LifeBuoy className="w-6 h-6 text-orange-500" />,
+      altIcon: <Monitor className="w-6 h-6 text-orange-500" />,
+      title: "Post-Migration Support",
+      desc: "Performance monitoring, cost control, and workload tuning built into our delivery model.",
     },
     {
-      icon: <Globe className="w-6 h-6 text-orange-500" />,
-      altIcon: <Target className="w-6 h-6 text-orange-500" />,
-      title: "SRE DNA Injection",
-      desc: "Implements SLIs, chaos testing, and alert hygiene with hands-on playbooks.",
-    },
-    {
-      icon: <LayoutGrid className="w-6 h-6 text-orange-500" />,
-      altIcon: <Brain className="w-6 h-6 text-orange-500" />,
-      title: "Velocity Decay Monitoring",
-      desc: "Tracks regressions and tool sprawl to prevent performance drift over time.",
+      icon: <ShieldCheck className="w-6 h-6 text-orange-500" />,
+      altIcon: <Lock className="w-6 h-6 text-orange-500" />,
+      title: "Security & Compliance at Core",
+      desc: "From IAM and policy enforcement to VAPT and logging — no corner is cut.",
     },
   ];
+
   const stats = [
     {
-      value: "3x",
+      value: "22%",
       label:
-        "increase in API scalability with no latency issues",
+        "faster query performance, boosting analytics efficiency",
     },
     {
-      value: "43%",
-      label: "improvement in incident response time",
+      value: "31%",
+      label: "reduction in operational overhead, driven by automation",
     },
   ];
   const awardsList = [
-    "/awards/deloitte1.png",
-    "/awards/deloitte2.png",
-    "/awards/duns1.png",
-    "/awards/duns2.png",
-    "/awards/sme.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-2.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/500-1-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/fast50-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
   ];
 
   const statsList = [
@@ -197,43 +217,48 @@ It’s the Growth Platform.
         title={
           <>
             What Smart 
-            <span className="text-yellow-400">Cloud Optimization</span> Must Absolutely Deliver
+            <span className="text-yellow-400"> Cloud Migrations </span> Must Deliver  Today
           </>
         }
-        description="If it doesn’t solve these — it’s just another expense:"
+        description="Cloud transformation must go beyond ‘lift and shift.’ It must enable your business to operate faster, safer, and smarter."
         features={features}
       />
 
       <NorthslingUIDesigns
         sectionTitle={
           <>
-         Northling Cloud Performance Disruption Model <br className="hidden md:block" />
+     Why     Northling Cloud for Cloud Consulting & Migration<br className="hidden md:block" />
           </>
         }
-        sectionSubtitle="Rewiring optimization around five friction-first disruptors that silently bleed performance:"
+        sectionSubtitle="Northling helps enterprises shift from legacy infrastructure to scalable cloud environments — across AWS, Azure, and GCP — without breaking momentum."
         features={uiFeatures}
       />
+    <PartnersSection
+      title="Cloud Migration, the Northsling Way Through Our Partners"
+      subtitle="Partnering with industry leaders to deliver seamless, secure, and cost-effective migration experiences across platforms."
+      partners={cloudPartners}
+      themeColor="orange"
+    />
+
       <CaseStudySection
         tag="Case Study"
-        title="EZTaxReturn Cuts Costs 70–80% & Achieves 3x Faster Deployments with INT."
-        description="Northsling modernized EZTaxReturn’s tax platform to handle peak season traffic with speed, cost-efficiency, and compliance.
+        title="22% Faster Queries & 31% Less Overhead: HealthTech Migration with Northsling"
+        description="Northsling executed a secure, zero-downtime hybrid cloud migration for a HealthTech firm.
 "
-        image="https://intglobal.com/wp-content/uploads/2025/05/Performance-Optimization.png"
+        image="https://intglobal.com/wp-content/uploads/2025/07/saas-concept-collage-1536x1023.jpg"
         stats={stats}
         ctaText="Read full case study"
         ctaLink="#"
       />
       <UxAuditSection
         logoText="NS"
-        heading="Get a Free Website
-Performance Audit"
-        subheading="Is your website silently hurting your brand and pipeline?"
+        heading="Get a Free Cloud Migration Readiness Audit"
+        subheading="Discover what’s slowing your migration down — and how to fix it fast."
         points={[
-   "Speed, UX, and Core Web Vitals audit",
-"Personalization & accessibility readiness report",
-"Martech and CRM integration landscape map",
-"Compliance & security gap analysis",
-"Tailored optimization roadmap",
+' Cloud readiness and workload mapping',
+"Risk and cost estimation report",
+"Security & compliance posture review",
+"Optimization roadmap across AWS, Azure, or GCP"
         ]}
         buttonText="Schedule Your Free Assessment"
         buttonAction={() => console.log("Button clicked!")}

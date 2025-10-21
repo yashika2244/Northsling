@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 export const data = {
   "Customer Experience": {
     services: [
@@ -90,7 +91,9 @@ export const data = {
 };
 
 export default function ServicesPanel() {
-  
+    const location = useLocation();
+  // const categories = Object.keys(data);
+
   const categories = [
     "Customer Experience",
     "Digital Engineering",
@@ -102,9 +105,26 @@ export default function ServicesPanel() {
     "Products",
   ];
 
-  const [active, setActive] = useState("Customer Experience");
+
+    
   const normalize = (str) =>
     str.toLowerCase().replace(/\s+/g, "-").replace(/\//g, "-");
+
+    const getActiveFromURL = () => {
+    const path = location.pathname.toLowerCase();
+    for (let cat of categories) {
+      const services = data[cat].services.map((s) =>
+        `/services/${normalize(s)}`.toLowerCase()
+      );
+      if (services.includes(path)) return cat;
+    }
+    return "Customer Experience"; // fallback
+  };
+const [active, setActive] = useState(getActiveFromURL());
+  // Re-run when the route changes
+  React.useEffect(() => {
+    setActive(getActiveFromURL());
+  }, [location.pathname]);
   return (
     <div className="relative hide-scrollbar bg-gradient-to-br from-white via-orange-50 to-white text-gray-800 rounded-3xl shadow-xl border border-orange-100 flex flex-col sm:flex-row overflow-hidden max-w-8xl md:mx-6 mb-16">
       {/* Mobile Categories - Horizontal Scroll */}

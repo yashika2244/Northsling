@@ -68,7 +68,7 @@ function Devops() {
     },
     {
       icon: <Zap className="w-6 h-6 text-orange-500" />,
-      title: "nfrastructure as Code Enablement",
+      title: "frastructure as Code Enablement",
       desc: "Govern and scale infra through Terraform, Kubernetes, and Ansible",
     },
     {
@@ -104,11 +104,11 @@ function Devops() {
     },
   ];
   const awardsList = [
-    "/awards/deloitte1.png",
-    "/awards/deloitte2.png",
-    "/awards/duns1.png",
-    "/awards/duns2.png",
-    "/awards/sme.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-2.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/500-1-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/fast50-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
   ];
 
   const statsList = [
@@ -192,7 +192,7 @@ function Devops() {
             Critical Dimensions <br className="hidden md:block" />
           </>
         }
-        sectionSubtitle="At Northsling, DevOps isn’t a tooling sprint — it’s a strategic overhaul of how you build, ship, and secure software at scale.:"
+        sectionSubtitle="At Northsling, DevOps isn’t a tooling sprint — it’s a strategic overhaul of how you build, ship, and secure software at scale."
         features={uiFeatures}
       />
       <CaseStudySection

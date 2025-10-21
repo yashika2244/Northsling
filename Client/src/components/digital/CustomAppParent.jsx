@@ -108,13 +108,13 @@ const uiFeatures = [
             "faster transactions—cutting average time from 20 to under 5 minutes.",
         },
       ];
-      const awardsList = [
-        "/awards/deloitte1.png",
-        "/awards/deloitte2.png",
-        "/awards/duns1.png",
-        "/awards/duns2.png",
-        "/awards/sme.png",
-      ];
+  const awardsList = [
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-2.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/500-1-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/fast50-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
+  ];
     
       const statsList = [
         { value: "27+", label: "Years of Excellence" },

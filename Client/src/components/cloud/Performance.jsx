@@ -26,7 +26,7 @@ import {
 
 import WhoWeAreSection from "../Ui.jsx/WhoWeAre";
 function Performance() {
- const features = [
+  const features = [
     {
       icon: <Rocket className="w-7 h-7 text-yellow-400" />,
       altIcon: <Zap className="w-7 h-7 text-yellow-400" />,
@@ -77,8 +77,7 @@ function Performance() {
     },
   ];
 
-
- const uiFeatures = [
+  const uiFeatures = [
     {
       icon: <Target className="w-6 h-6 text-orange-500" />,
       altIcon: <Layers className="w-6 h-6 text-orange-500" />,
@@ -113,8 +112,7 @@ function Performance() {
   const stats = [
     {
       value: "3x",
-      label:
-        "increase in API scalability with no latency issues",
+      label: "increase in API scalability with no latency issues",
     },
     {
       value: "43%",
@@ -122,11 +120,11 @@ function Performance() {
     },
   ];
   const awardsList = [
-    "/awards/deloitte1.png",
-    "/awards/deloitte2.png",
-    "/awards/duns1.png",
-    "/awards/duns2.png",
-    "/awards/sme.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-2.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/500-1-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/02/fast50-1.png",
+    "https://intglobal.com/wp-content/uploads/2025/01/Award-Image-3.png",
   ];
 
   const statsList = [
@@ -141,10 +139,8 @@ function Performance() {
       <HeroSection
         title={
           <>
-          Your Cloud Spends Millions.     <br />
-Shouldn’t It Perform Like One?
-       
-        
+            Your Cloud Spends Millions. <br />
+            Shouldn’t It Perform Like One?
           </>
         }
         subtitle="Northsling turns cloud performance into competitive advantage — not operational drag."
@@ -161,17 +157,18 @@ Shouldn’t It Perform Like One?
       <UiImpactSection
         title={
           <>
-          An Unoptimized Cloud Drains Money, Slows Teams, And Frustrates Customers
+            An Unoptimized Cloud Drains Money, Slows Teams, And Frustrates
+            Customers
             <br />
           </>
         }
         description="Performance Optimization is about squeezing the most out of your infrastructure — speed, efficiency, and resilience without overspending. At Northsling, we fine-tune workloads, streamline architectures, and eliminate bottlenecks so your cloud runs at peak performance every day."
         points={[
-   "   Workload right-sizing to cut waste and reduce costs",
-"Application performance tuning for faster response times and smoother experiences",
-"Cloud architecture optimization to improve scalability and reliability",
-"Continuous monitoring with real-time alerts and proactive issue resolution",
-"Cost governance frameworks that keep spending efficient and predictable",
+          "   Workload right-sizing to cut waste and reduce costs",
+          "Application performance tuning for faster response times and smoother experiences",
+          "Cloud architecture optimization to improve scalability and reliability",
+          "Continuous monitoring with real-time alerts and proactive issue resolution",
+          "Cost governance frameworks that keep spending efficient and predictable",
         ]}
         stats={[
           {
@@ -196,8 +193,9 @@ Shouldn’t It Perform Like One?
       <ModernUIDeliver
         title={
           <>
-            What Smart 
-            <span className="text-yellow-400">Cloud Optimization</span> Must Absolutely Deliver
+            What Smart
+            <span className="text-yellow-400">Cloud Optimization</span> Must
+            Absolutely Deliver
           </>
         }
         description="If it doesn’t solve these — it’s just another expense:"
@@ -207,7 +205,8 @@ Shouldn’t It Perform Like One?
       <NorthslingUIDesigns
         sectionTitle={
           <>
-         Northling Cloud Performance Disruption Model <br className="hidden md:block" />
+            Northling Cloud Performance Disruption Model{" "}
+            <br className="hidden md:block" />
           </>
         }
         sectionSubtitle="Rewiring optimization around five friction-first disruptors that silently bleed performance:"
@@ -215,7 +214,7 @@ Shouldn’t It Perform Like One?
       />
       <CaseStudySection
         tag="Case Study"
-        title="EZTaxReturn Cuts Costs 70–80% & Achieves 3x Faster Deployments with INT."
+        title="EZTaxReturn Cuts Costs 70–80% & Achieves 3x Faster Deployments with Northsling"
         description="Northsling modernized EZTaxReturn’s tax platform to handle peak season traffic with speed, cost-efficiency, and compliance.
 "
         image="https://intglobal.com/wp-content/uploads/2025/05/Performance-Optimization.png"
@@ -229,11 +228,11 @@ Shouldn’t It Perform Like One?
 Performance Audit"
         subheading="Is your website silently hurting your brand and pipeline?"
         points={[
-   "Speed, UX, and Core Web Vitals audit",
-"Personalization & accessibility readiness report",
-"Martech and CRM integration landscape map",
-"Compliance & security gap analysis",
-"Tailored optimization roadmap",
+          "Speed, UX, and Core Web Vitals audit",
+          "Personalization & accessibility readiness report",
+          "Martech and CRM integration landscape map",
+          "Compliance & security gap analysis",
+          "Tailored optimization roadmap",
         ]}
         buttonText="Schedule Your Free Assessment"
         buttonAction={() => console.log("Button clicked!")}

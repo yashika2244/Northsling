@@ -228,6 +228,67 @@ export default function ServiceDetail() {
       </Suspense>
     );
   }
+  if (serviceId === "cloud-email-solution") {
+    const CloudEmail = React.lazy(() =>
+      import("../../components/cloud/CloudEmail")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <CloudEmail/>
+      </Suspense>
+    );
+  }
+  // Cybersecurity links
+  if (serviceId === "cybersecurity-audits-&-risk-assessments") {
+    const CybersecurityAudits = React.lazy(() =>
+      import("../../components/cybersecurity/CybersecurityAudits")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <CybersecurityAudits/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "vulnerability-assessment-&-penetration-testing-(vapt)") {
+    const Vulnerability = React.lazy(() =>
+      import("../../components/cybersecurity/Vulnerability")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Vulnerability/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "governance,-risk,-and-compliance-(grc)") {
+    const Governance = React.lazy(() =>
+      import("../../components/cybersecurity/Governance")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Governance/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "cyber-insurance-&-incident-response") {
+    const CyberInsurance = React.lazy(() =>
+      import("../../components/cybersecurity/CyberInsurance")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <CyberInsurance/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "email-threat-protection-&-compliance") {
+    const Email = React.lazy(() =>
+      import("../../components/cybersecurity/Email")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Email/>
+      </Suspense>
+    );
+  }
 
   // Placeholder for other services
   return (
