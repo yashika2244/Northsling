@@ -104,11 +104,11 @@ const uiFeatures = [
 ];
   const stats = [
     {
-      value: "72-hour",
+      value: "8",
       label: "system recovery, resuming critical payment operations swiftly",
     },
     {
-      value: "15%",
+      value: "40%",
       label: "projected drop in cyber premiums, driven by improved controls",
     },
   ];

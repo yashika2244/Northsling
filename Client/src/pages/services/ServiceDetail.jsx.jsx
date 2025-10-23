@@ -289,6 +289,111 @@ export default function ServiceDetail() {
       </Suspense>
     );
   }
+  // Integrate Links
+  if (serviceId === "unified-kpi-visibility") {
+    const KPI = React.lazy(() =>
+      import("../../components/integrate/KPI")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <KPI/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "digital-asset-optimization") {
+    const KPI = React.lazy(() =>
+      import("../../components/integrate/KPI")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <KPI/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "full-funnel-growth") {
+    const KPI = React.lazy(() =>
+      import("../../components/integrate/KPI")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <KPI/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "flexi") {
+    const ManageServices = React.lazy(() =>
+      import("../../components/manageServices/ManageServices")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <ManageServices/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "dedicated") {
+    const ManageServices = React.lazy(() =>
+      import("../../components/manageServices/ManageServices")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <ManageServices/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "managed-dedicated") {
+    const ManageServices = React.lazy(() =>
+      import("../../components/manageServices/ManageServices")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <ManageServices/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "fix-bid") {
+    const ManageServices = React.lazy(() =>
+      import("../../components/manageServices/ManageServices")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <ManageServices/>
+      </Suspense>
+    );
+  }
+  // Products Links
+  if (serviceId === "breeze") {
+    const Breeze = React.lazy(() =>
+      import("../../components/products/Breeze")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Breeze/>
+      </Suspense>
+    );
+  }
+
+  if (serviceId === "mobilearn") {
+    const Mobilearn = React.lazy(() =>
+      import("../../components/products/Mobilearn")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Mobilearn/>
+      </Suspense>
+    );
+  }
+  if (serviceId === "origin-insurance") {
+    const Origin = React.lazy(() =>
+      import("../../components/products/Origin")
+    );
+    return (
+  <Suspense fallback={<LoadingScreen />}>
+        <Origin/>
+      </Suspense>
+    );
+  }
+
+
 
   // Placeholder for other services
   return (

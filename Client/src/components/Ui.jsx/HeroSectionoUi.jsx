@@ -8,6 +8,7 @@ export default function HeroSection({
   primaryBtn,
   secondaryBtn,
   bgImage,
+  logo,
   ratings = [],
   titleColor = "text-white",
   subtitleColor = "text-gray-100",
@@ -31,25 +32,31 @@ export default function HeroSection({
 
       {/* Hero Content */}
       <motion.div
-        className={`relative z-10 flex-1 max-w-2xl mt-25 ${
-          isLeft ? "text-left" : "text-right ml-auto"
-        }`}
-        initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        {/* Title */}
-        <h1
-          className={`text-4xl  font-bold mb-4 leading-tight ${titleColor}`}
-        >
-          {title}
-        </h1>
+  className={`relative z-10 flex-1 max-w-2xl mt-25 ${
+    isLeft ? "text-left" : "text-right ml-auto"
+  }`}
+  initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.8 }}
+>
+  {/* Logo above heading, aligned with text */}
+  {logo && (
+    <img
+      src={logo}
+      alt="Logo"
+      className="mb-4 h-8 sm:h-8 lg:h-12 rounded-2xl"
+    />
+  )}
 
-        {/* Subtitle */}
-        <p className={`text-lg sm:text-xl lg:text-2xl mb-8 ${subtitleColor}`}>
-          {subtitle}
-        </p>
+  {/* Title */}
+  <h1 className={`text-4xl font-bold mb-4 leading-tight ${titleColor}`}>
+    {title}
+  </h1>
 
+  {/* Subtitle */}
+  <p className={`text-lg sm:text-xl lg:text-lg mb-8 ${subtitleColor}`}>
+    {subtitle}
+  </p>
         {/* Buttons */}
         <div className="flex flex-wrap gap-4">
           {primaryBtn && (
