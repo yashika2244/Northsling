@@ -10,8 +10,8 @@ import ServicesPanel from "../pages/services/ProductsUI";
 import IndustriesPanel from "../pages/industries/IndustrienPanel";
 import CompanyPanel from "../pages/company/CompanyPanel";
 import InvestorsPanel from "../pages/investers/InvestersPanel";
-import ResourcesPanel from "../pages/career/ResoucesPanel";
 import Success from "../pages/success/Success";
+import ResourcesPanel from "../pages/resource/ResourcesPanel";
 
 export default function Navbar() {
   const navigate = useNavigate();

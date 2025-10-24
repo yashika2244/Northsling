@@ -9,12 +9,9 @@ export default function WhoWeAreSection({
   tag = "About Us",
   title = "Who We Are",
   highlightedText = "",
-  description = "We go beyond maintaining operations—empowering businesses with data, insights, and best practices to stay ahead in an ever-evolving digital landscape.",
+  description = "",
   stats = [
-    { value: "27+", label: "Years of Excellence" },
-    { value: "10", label: "Offices Worldwide" },
-    { value: "1,100+", label: "Solution Experts" },
-    { value: "500+", label: "Worldwide Happy Clients" },
+   
   ],
   awards = [],
   primaryColor = "text-blue-600",
@@ -90,7 +87,7 @@ export default function WhoWeAreSection({
                   <img
                     src={src}
                     alt={`Award ${i + 1}`}
-                    className="h-14 md:h-16 object-contain grayscale hover:grayscale-0 transition-all"
+                    className="h-14 md:h-16 object-contain transition-all"
                   />
                 </div>
               </SwiperSlide>
